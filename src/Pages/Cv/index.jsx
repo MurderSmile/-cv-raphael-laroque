@@ -5,6 +5,7 @@ import Formations from "./CvSections/Formations";
 import Competences from "./CvSections/Competences";
 import SoftSkills from "./CvSections/SoftSkills";
 import Interets from "./CvSections/interets";
+import Realisations from "./CvSections/Realisations";
 
 function Cv() {
     return (
@@ -16,6 +17,7 @@ function Cv() {
             <Competences />
             <SoftSkills />
             <Interets />
+            <Realisations />
         </div>
     )
 }

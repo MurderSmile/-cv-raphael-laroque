@@ -3,42 +3,69 @@ body {
 }
 
 #Cv {
-  background-color: black;
+  display: grid;
+  grid-template: repeat(4, auto)/repeat(5, auto);
+  grid-gap: 5px;
 }
 
 #Presentation {
+  grid-column: 1/6;
   background-color: indianred;
-  width: 400px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+#PresentationName {
+  display: flex;
+  flex-direction: column;
+}
+#Presentation img {
+  width: 150px;
+  border-radius: 10px;
 }
 
 #Profil {
+  grid-row: 2/2;
   background-color: greenyellow;
-  width: 400px;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 #Experiences {
   background-color: blueviolet;
-  width: 400px;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 #Formations {
   background-color: red;
-  width: 400px;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 #Competences {
   background-color: aqua;
-  width: 400px;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 #SoftSkills {
   background-color: orange;
-  width: 400px;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 #Interets {
   background-color: teal;
-  width: 400px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#Realisations {
+  background-color: palevioletred;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 body {

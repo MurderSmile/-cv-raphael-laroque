@@ -2,44 +2,74 @@ body {
     margin: 0;
 }
 
-$size: 400px;
+$radius: 10px;
+$padding: 5px;
 
 // Section CV //
 #Cv {
-    background-color: black;
+    display: grid;
+    grid-template: repeat(4, auto) / repeat(5, auto);
+    grid-gap: 5px
 }
 
 #Presentation {
+    grid-column: 1 / 6;
     background-color: indianred;
-    width: $size;
+    border-radius: $radius;
+    display: flex;
+    justify-content: space-around;
+    padding: $padding;
+
+    &Name {
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        width: 150px;
+        border-radius: $radius;
+    }
 }
 
 #Profil {
+    grid-row: 2 / 2;
     background-color: greenyellow;
-    width: $size;
+    border-radius: $radius;
+    padding: $padding;
 }
 
 #Experiences {
     background-color: blueviolet;
-    width: $size;
+    border-radius: $radius;
+    padding: $padding;
 }
 
 #Formations {
     background-color: red;
-    width: $size;
+    border-radius: $radius;
+    padding: $padding;
 }
 
 #Competences {
     background-color: aqua;
-    width: $size;
+    border-radius: $radius;
+    padding: $padding;
 }
 
 #SoftSkills {
     background-color: orange;
-    width: $size;
+    border-radius: $radius;
+    padding: $padding;
 }
 
 #Interets {
     background-color: teal;
-    width: $size;
+    border-radius: $radius;
+    padding: $padding;
+}
+
+#Realisations {
+    background-color: palevioletred;
+    border-radius: $radius;
+    padding: $padding;
 }
