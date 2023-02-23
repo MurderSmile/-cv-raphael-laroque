@@ -1,6 +1,6 @@
 function Formations() {
     return (
-        <div>
+        <div id="Formations">
             <h3>Formations</h3>
             <ul>
                 <li>

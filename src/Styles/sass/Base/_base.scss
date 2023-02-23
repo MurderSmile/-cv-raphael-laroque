@@ -1,13 +1,45 @@
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+$size: 400px;
+
+// Section CV //
+#Cv {
+    background-color: black;
+}
+
+#Presentation {
+    background-color: indianred;
+    width: $size;
+}
+
+#Profil {
+    background-color: greenyellow;
+    width: $size;
+}
+
+#Experiences {
+    background-color: blueviolet;
+    width: $size;
+}
+
+#Formations {
+    background-color: red;
+    width: $size;
+}
+
+#Competences {
+    background-color: aqua;
+    width: $size;
+}
+
+#SoftSkills {
+    background-color: orange;
+    width: $size;
+}
+
+#Interets {
+    background-color: teal;
+    width: $size;
 }

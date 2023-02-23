@@ -1,6 +1,6 @@
 function Competences() {
     return (
-        <div>
+        <div id="Competences">
             <h3>Compétences</h3>
             <ul>
                 <li>

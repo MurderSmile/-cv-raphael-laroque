@@ -1,6 +1,6 @@
 function Interets() {
     return (
-        <div>
+        <div id="Interets">
             <h3>Intérets</h3>
             <ul>
                 <li>Films/séries</li>

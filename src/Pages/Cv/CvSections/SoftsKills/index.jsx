@@ -1,6 +1,6 @@
-function SoftsKills() {
+function SoftSkills() {
     return (
-        <div>
+        <div id="SoftSkills">
             <h3>Softs Kills</h3>
             <ul>
                 <li>Esprit de coopération</li>
@@ -14,4 +14,4 @@ function SoftsKills() {
     )
 }
 
-export default SoftsKills
+export default SoftSkills

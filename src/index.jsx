@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './Styles/css/index.css';
-import Cv from './Pages/Cv/index';
 import reportWebVitals from './reportWebVitals';
+
+import Cv from './Pages/Cv/index';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
