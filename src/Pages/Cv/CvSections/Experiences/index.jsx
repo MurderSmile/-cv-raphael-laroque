@@ -1,6 +1,10 @@
+import { useState } from "react"
+
 function Experiences() {
-    return (
-        <div id="Experiences">
+    const [isOpen, setIsOpen] = useState(false)
+
+    return isOpen ? (
+        <div id="Experiences" onClick={() => setIsOpen(false)}>
             <h3>Expériences</h3>
             <ul>
                 <li>
@@ -51,6 +55,12 @@ function Experiences() {
             </ul>
         </div>
     )
+
+        : (
+            <div id="Experiences" onClick={() => setIsOpen(true)}>
+                <h3>Expériences</h3>
+            </div>
+        )
 }
 
 export default Experiences

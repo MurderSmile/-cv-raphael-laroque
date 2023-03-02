@@ -1,6 +1,10 @@
+import { useState } from "react"
+
 function Interets() {
-    return (
-        <div id="Interets">
+    const [isOpen, setIsOpen] = useState(false)
+
+    return isOpen ? (
+        <div id="Interets" onClick={() => setIsOpen(false)}>
             <h3>Intérets</h3>
             <ul>
                 <li>Films/séries</li>
@@ -10,6 +14,12 @@ function Interets() {
             </ul>
         </div>
     )
+
+        : (
+            <div id="Interets" onClick={() => setIsOpen(true)}>
+                <h3>Intérets</h3>
+            </div>
+        )
 }
 
 export default Interets

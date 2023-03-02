@@ -1,26 +1,28 @@
+import { useState } from "react"
+
+import { projects } from "../../../../Datas/index";
+
 function Realisations() {
-    return (
-        <div id="Realisations">
+    const [isOpen, setIsOpen] = useState(false)
+
+    return isOpen ? (
+        <div id="Realisations" onClick={() => setIsOpen(false)}>
             <h3>Réalisations</h3>
             <ul>
-                <li>
-                    Ohmyfood
-                </li>
-                <li>
-                    Kanap
-                </li>
-                <li>
-                    Agence la Panthere
-                </li>
-                <li>
-                    OC_Piiquante
-                </li>
-                <li>
-                    OC_Groupomania
-                </li>
+                {projects.map((project) =>
+                    <li onClick={() => console.log(project)}>
+                        {project.name}
+                    </li>
+                )}
             </ul>
         </div>
     )
+
+        : (
+            <div id="Realisations" onClick={() => setIsOpen(true)}>
+                <h3>Réalisations</h3>
+            </div>
+        )
 }
 
 export default Realisations

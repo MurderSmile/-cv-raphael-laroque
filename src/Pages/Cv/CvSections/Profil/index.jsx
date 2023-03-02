@@ -1,6 +1,10 @@
+import { useState } from "react"
+
 function Profil() {
-    return (
-        <div id="Profil">
+    const [isOpen, setIsOpen] = useState(false)
+
+    return isOpen ? (
+        <div id="Profil" onClick={() => setIsOpen(false)}>
             <h3>Profil</h3>
             <p>
                 Ayant obtenu récemment mon diplôme de "Développeur WEB" dans le cadre d’une reconversion,
@@ -8,6 +12,12 @@ function Profil() {
             </p>
         </div>
     )
+
+        : (
+            <div id="Profil" onClick={() => setIsOpen(true)}>
+                <h3>Profil</h3>
+            </div>
+        )
 }
 
 export default Profil

@@ -6,6 +6,7 @@ import Competences from "./CvSections/Competences";
 import SoftSkills from "./CvSections/SoftSkills";
 import Interets from "./CvSections/interets";
 import Realisations from "./CvSections/Realisations";
+import Descriptif from "./CvSections/Descriptif";
 
 function Cv() {
     return (
@@ -18,6 +19,7 @@ function Cv() {
             <SoftSkills />
             <Interets />
             <Realisations />
+            {/*<Descriptif />*/}
         </div>
     )
 }

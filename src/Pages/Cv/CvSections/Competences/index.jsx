@@ -1,6 +1,10 @@
+import { useState } from "react"
+
 function Competences() {
-    return (
-        <div id="Competences">
+    const [isOpen, setIsOpen] = useState(false)
+
+    return isOpen ? (
+        <div id="Competences" onClick={() => setIsOpen(false)}>
             <h3>Compétences</h3>
             <ul>
                 <li>
@@ -21,6 +25,12 @@ function Competences() {
             </ul>
         </div>
     )
+
+        : (
+            <div id="Competences" onClick={() => setIsOpen(true)}>
+                <h3>Compétences</h3>
+            </div>
+        )
 }
 
 export default Competences

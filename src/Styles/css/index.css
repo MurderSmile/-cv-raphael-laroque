@@ -2,18 +2,29 @@ body {
   margin: 0;
 }
 
+header {
+  display: flex;
+  background-color: aqua;
+  top: 0;
+}
+
+footer {
+  display: flex;
+  background-color: aqua;
+  bottom: 0;
+}
+
 #Cv {
   display: grid;
-  grid-template: repeat(4, auto)/repeat(5, auto);
   grid-gap: 5px;
 }
 
 #Presentation {
-  grid-column: 1/6;
   background-color: indianred;
   border-radius: 10px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
   padding: 5px;
 }
 #PresentationName {
@@ -26,7 +37,6 @@ body {
 }
 
 #Profil {
-  grid-row: 2/2;
   background-color: greenyellow;
   border-radius: 10px;
   padding: 5px;
@@ -66,6 +76,47 @@ body {
   background-color: palevioletred;
   border-radius: 10px;
   padding: 5px;
+}
+#Realisations ul li {
+  cursor: pointer;
+}
+
+.fond {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.fond .Descriptif {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  width: 90%;
+}
+.fond .Descriptif img {
+  width: 200px;
+}
+.fond .Descriptif .apercu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fond .Descriptif .acces {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 150px;
+  height: 150px;
+}
+.fond .Descriptif .acces button {
+  height: 50px;
 }
 
 body {

@@ -1,6 +1,10 @@
+import { useState } from "react"
+
 function Formations() {
-    return (
-        <div id="Formations">
+    const [isOpen, setIsOpen] = useState(false)
+
+    return isOpen ? (
+        <div id="Formations" onClick={() => setIsOpen(false)}>
             <h3>Formations</h3>
             <ul>
                 <li>
@@ -34,6 +38,12 @@ function Formations() {
             </ul>
         </div>
     )
+
+        : (
+            <div id="Formations" onClick={() => setIsOpen(true)}>
+                <h3>Formations</h3>
+            </div>
+        )
 }
 
 export default Formations
