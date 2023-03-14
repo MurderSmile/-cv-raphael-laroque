@@ -8,7 +8,14 @@ import Interets from "./CvSections/interets";
 import Realisations from "./CvSections/Realisations";
 import Descriptif from "./CvSections/Descriptif";
 
+import { useContext } from "react";
+import { ProjectContext } from "../../Utils/Context/index";
+
+
 function Cv() {
+
+    const { project } = useContext(ProjectContext)
+
     return (
         <div id="Cv">
             <Presentation />
@@ -19,7 +26,7 @@ function Cv() {
             <SoftSkills />
             <Interets />
             <Realisations />
-            {/*<Descriptif />*/}
+            {project && project != null ? <Descriptif /> : null}
         </div>
     )
 }

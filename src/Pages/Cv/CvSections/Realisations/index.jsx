@@ -1,8 +1,11 @@
-import { useState } from "react"
-
+import { useContext, useState } from "react"
+import { ProjectContext } from "../../../../Utils/Context/index";
 import { projects } from "../../../../Datas/index";
 
+
 function Realisations() {
+
+    const { setProject } = useContext(ProjectContext)
     const [isOpen, setIsOpen] = useState(false)
 
     return isOpen ? (
@@ -10,7 +13,10 @@ function Realisations() {
             <h3>Réalisations</h3>
             <ul>
                 {projects.map((project) =>
-                    <li onClick={() => console.log(project)}>
+                    <li key={project.name} onClick={(e) => {
+                        e.stopPropagation()
+                        setProject(project)
+                    }}>
                         {project.name}
                     </li>
                 )}
