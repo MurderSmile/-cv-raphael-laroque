@@ -1,18 +1,16 @@
 import { useState } from "react"
 
-//<i className="fas fa-arrow-circle-down"></i>
-
 function Profil() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div id="Profil" className={isOpen ? "IsOpen" : null} onClick={() => setIsOpen(isOpen ? false : true)}>
+        <div id="Profil" className={isOpen ? "IsOpen" : null}>
 
-            <div id="Profil__header">
+            <div id="Profil__header" onClick={() => setIsOpen(isOpen ? false : true)}>
 
                 <div id="Profil__header__title">
-                    <i className="fas fa-user-graduate">
-                    </i><h3>Profil</h3>
+                    <i className="fas fa-user-circle"></i>
+                    <h3>Profil</h3>
                 </div>
 
                 <i className="fas fa-arrow-circle-up"></i>
