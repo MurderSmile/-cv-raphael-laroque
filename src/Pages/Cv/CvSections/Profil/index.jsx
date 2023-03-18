@@ -4,7 +4,7 @@ function Profil() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div id="Profil" className={isOpen ? "IsOpen" : null}>
+        <section id="Profil" className={isOpen ? "IsOpen" : null}>
 
             <div id="Profil__header" onClick={() => setIsOpen(isOpen ? false : true)}>
 
@@ -22,7 +22,7 @@ function Profil() {
                 je souhaite investir et continuer à développer mes compétences tout en offrant un regard neuf auprès de mes employeurs.
             </p>
 
-        </div>
+        </section>
     )
 }
 

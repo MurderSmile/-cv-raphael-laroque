@@ -4,7 +4,7 @@ function Competences() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div id="Competences" className={isOpen ? "IsOpen" : null}>
+        <section id="Competences" className={isOpen ? "IsOpen" : null}>
 
             <div id="Competences__header" onClick={() => setIsOpen(isOpen ? false : true)}>
 
@@ -35,7 +35,7 @@ function Competences() {
                 </li>
             </ul>
 
-        </div>
+        </section>
     )
 }
 

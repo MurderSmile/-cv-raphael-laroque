@@ -8,10 +8,21 @@ function Realisations() {
     const { setProject } = useContext(ProjectContext)
     const [isOpen, setIsOpen] = useState(false)
 
-    return isOpen ? (
-        <div id="Realisations" onClick={() => setIsOpen(false)}>
-            <h3>Réalisations</h3>
-            <ul>
+    return (
+        <section id="Realisations" className={isOpen ? "IsOpen" : null}>
+
+            <div id="Realisations__header" onClick={() => setIsOpen(isOpen ? false : true)}>
+
+                <div id="Realisations__header__title">
+                    <i className="fas fa-trophy"></i>
+                    <h3>Réalisations</h3>
+                </div>
+
+                <i className="fas fa-arrow-circle-up"></i>
+
+            </div>
+
+            <ul id="Realisations__content">
                 {projects.map((project) =>
                     <li key={project.name} onClick={(e) => {
                         e.stopPropagation()
@@ -21,14 +32,8 @@ function Realisations() {
                     </li>
                 )}
             </ul>
-        </div>
+        </section>
     )
-
-        : (
-            <div id="Realisations" onClick={() => setIsOpen(true)}>
-                <h3>Réalisations</h3>
-            </div>
-        )
 }
 
 export default Realisations

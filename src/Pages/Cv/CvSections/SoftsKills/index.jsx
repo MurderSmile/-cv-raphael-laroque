@@ -4,7 +4,7 @@ function SoftSkills() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div id="SoftSkills" className={isOpen ? "IsOpen" : null}>
+        <section id="SoftSkills" className={isOpen ? "IsOpen" : null}>
 
             <div id="SoftSkills__header" onClick={() => setIsOpen(isOpen ? false : true)}>
 
@@ -27,7 +27,7 @@ function SoftSkills() {
                 <li>Calme</li>
             </ul>
 
-        </div>
+        </section>
     )
 
 }

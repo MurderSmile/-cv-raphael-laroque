@@ -4,7 +4,7 @@ function Formations() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div id="Formations" className={isOpen ? "IsOpen" : null}>
+        <section id="Formations" className={isOpen ? "IsOpen" : null}>
 
             <div id="Formations__header" onClick={() => setIsOpen(isOpen ? false : true)}>
 
@@ -48,7 +48,7 @@ function Formations() {
                 </li>
             </ul>
 
-        </div>
+        </section>
     )
 
 }

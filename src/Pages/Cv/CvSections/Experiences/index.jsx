@@ -4,12 +4,12 @@ function Experiences() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div id="Experiences" className={isOpen ? "IsOpen" : null}>
+        <section id="Experiences" className={isOpen ? "IsOpen" : null}>
 
             <div id="Experiences__header" onClick={() => setIsOpen(isOpen ? false : true)}>
 
                 <div id="Experiences__header__title">
-                    <i class="fas fa-suitcase"></i>
+                    <i className="fas fa-suitcase"></i>
                     <h3>Expériences</h3>
                 </div>
 
@@ -66,7 +66,7 @@ function Experiences() {
                 </li>
             </ul>
 
-        </div>
+        </section>
     )
 }
 
