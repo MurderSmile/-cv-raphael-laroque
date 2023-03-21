@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: #595959;
 }
 
 header {
@@ -16,6 +17,7 @@ footer {
 
 $radius: 10px;
 $padding: 5px;
+$margin: 5px;
 
 // Section CV //
 #Cv {
@@ -27,61 +29,101 @@ $padding: 5px;
 #Presentation {
     //grid-column: 1 / 4;
     //order: 0;
-    background-color: indianred;
+    background-color: #4068AE;
+    color: white;
     border-radius: $radius;
     display: flex;
     flex-direction: column;
     align-items: center;
     //justify-content: space-around;
     padding: $padding;
+    margin: $margin;
 
-    &Name {
+    &__name {
         display: flex;
         flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 150px;
+            border: #E6E7E8 6px solid;
+            box-shadow: 5px 5px black;
+            //border-radius: 40% 60% 26% 74% / 60% 20% 80% 40%;
+            animation: image 5000ms both infinite alternate ease-in-out;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
     }
 
-    img {
-        width: 150px;
-        border-radius: $radius;
+    a {
+        text-decoration: none;
+        color: white;
+
+        i {
+            margin-right: 5px
+        }
     }
+
+    ul {
+        list-style-type: none;
+
+    }
+
+    button {
+        padding: 5px;
+
+        a {
+            color: black;
+
+            i {
+                margin-right: 5px
+            }
+        }
+    }
+
 }
 
 #Profil {
     //order: 2;
-    @include section-mobile("Profil", greenyellow, 300px);
+    @include section-mobile("Profil", #92D050, 300px);
 }
 
 #Experiences {
     //order: 4;
     //grid-column: 2 / 3;
     //grid-row: 2 / 4;
-    @include section-mobile("Experiences", violet, 800px);
+    @include section-mobile("Experiences", #92D050, 400px);
 }
 
 #Formations {
     //order: 5;    
-    @include section-mobile("Formations", red, 700px);
+    @include section-mobile("Formations", #92D050, 400px);
 }
 
 #Competences {
     //order: 3;
-    @include section-mobile("Competences", aqua, 300px);
+    @include section-mobile("Competences", #92D050, 300px);
 }
 
 #SoftSkills {
     //order: 6;
-    @include section-mobile("SoftSkills", orange, 300px);
+    @include section-mobile("SoftSkills", #92D050, 300px);
 }
 
 #Interets {
     //order: 7;
-    @include section-mobile("Interets", teal, 300px);
+    @include section-mobile("Interets", #92D050, 300px);
 }
 
 #Realisations {
     //order: 8;
     //grid-column: 2 / 4;
-    @include section-mobile("Realisations", palevioletred, 300px);
+    @include section-mobile("Realisations", #92D050, 300px);
 
 
     ul {

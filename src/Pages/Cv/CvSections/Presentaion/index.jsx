@@ -3,23 +3,44 @@ import Cv from "../../../../Assets/CV_Laroque_Raphaël.pdf";
 
 function Presentation() {
     return (
-        <div id="Presentation">
-            <img src={PhotoProfil} alt="" />
-            <div id="PresentationName">
-                <h1>Raphaël Laroque</h1>
-                <h2>Développeur Web junior</h2>
+        <section id="Presentation">
+
+            <div id="Presentation__name">
+
+                <img src={PhotoProfil} alt="" />
+
+                <div>
+                    <h1>Raphaël Laroque</h1>
+                    <h2>Développeur Web junior</h2>
+                </div>
+
             </div>
+
             <ul>
-                <a href="mailto:raphael.Laroque@yahoo.fr"><li>raphael.Laroque@yahoo.fr</li></a>
-                <a href="https://github.com/MurderSmile"><li>www.linkedin.com/in/raphael-laroque</li></a>
-                <a href="tel:+33628515565"><li>06 28 51 55 65</li></a>
+                <li>Français</li>
+                <li>27 ans</li>
                 <li>Bordeaux, France</li>
                 <li>Permis B</li>
-                <li>27 ans</li>
-                <li>Français</li>
-                <a href={Cv}><i className="fas fa-file-download"></i></a>
+
+                <li><a href="tel:+33628515565">
+                    <i class="fas fa-chevron-right"></i>
+                    06 28 51 55 65
+                </a></li>
+
+                <li><a href="mailto:raphael.Laroque@yahoo.fr">
+                    <i class="fas fa-chevron-right"></i>
+                    raphael.Laroque@yahoo.fr
+                </a></li>
+
+                <li><a href="https://www.linkedin.com/in/raphael-laroque/?originalSubdomain=fr">
+                    <i class="fas fa-chevron-right"></i>
+                    www.linkedin.com/in/raphael-laroque
+                </a></li>
             </ul>
-        </div>
+
+            <button><a href={Cv}><i className="fas fa-file-download"></i>Télécharger la Version Papier</a></button>
+
+        </section>
     )
 }
 

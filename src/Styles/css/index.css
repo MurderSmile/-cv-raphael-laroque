@@ -8,8 +8,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+@keyframes image {
+  0% {
+    border-radius: 0% 100% 0% 100%/65% 35% 65% 35%;
+  }
+  100% {
+    border-radius: 100% 0% 100% 0%/35% 65% 35% 65%;
+  }
+}
 body {
   margin: 0;
+  background-color: #595959;
 }
 
 header {
@@ -30,38 +39,66 @@ footer {
 }
 
 #Presentation {
-  background-color: indianred;
+  background-color: #4068AE;
+  color: white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 5px;
+  margin: 5px;
 }
-#PresentationName {
+#Presentation__name {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-#Presentation img {
+#Presentation__name img {
   width: 150px;
-  border-radius: 10px;
+  border: #E6E7E8 6px solid;
+  box-shadow: 5px 5px black;
+  animation: image 5000ms both infinite alternate ease-in-out;
+}
+#Presentation__name div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Presentation a {
+  text-decoration: none;
+  color: white;
+}
+#Presentation a i {
+  margin-right: 5px;
+}
+#Presentation ul {
+  list-style-type: none;
+}
+#Presentation button {
+  padding: 5px;
+}
+#Presentation button a {
+  color: black;
+}
+#Presentation button a i {
+  margin-right: 5px;
 }
 
 #Profil {
-  background-color: greenyellow;
+  background-color: #92D050;
   border-radius: 10px;
   padding: 5px;
-  padding: 0;
   margin: 5px;
-  overflow: hidden;
+  overflow: scroll;
   max-height: 60px;
   transition: max-height 500ms ease-in-out;
 }
 #Profil__header {
-  background-color: greenyellow;
-  cursor: pointer;
+  background-color: #92D050;
   box-shadow: 0px 0px 0px black;
   border-radius: 10px;
-  position: relative;
+  position: sticky;
+  top: 0px;
   display: flex;
   height: 60px;
   transition: box-shadow 350ms 150ms;
@@ -75,19 +112,27 @@ footer {
   align-self: center;
   font-size: 20px;
 }
+#Profil__header__title > i::before {
+  width: 600px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 25px;
+}
 #Profil__header__title h3 {
   margin-left: 10px;
 }
 #Profil__header .fa-arrow-circle-up {
   position: absolute;
-  right: 0;
+  right: 10px;
   align-self: center;
   font-size: 30px;
   transform: rotate(0turn);
   transition: transform 300ms;
 }
 #Profil__content {
-  padding: 5px;
+  padding: 5px 25px;
+  border-radius: 10px;
+  box-shadow: #4068AE 2px 2px 5px 0px inset, #4068AE 2px 2px 5px 0px inset;
 }
 #Profil.IsOpen {
   max-height: 300px;
@@ -100,21 +145,20 @@ footer {
 }
 
 #Experiences {
-  background-color: violet;
+  background-color: #92D050;
   border-radius: 10px;
   padding: 5px;
-  padding: 0;
   margin: 5px;
-  overflow: hidden;
+  overflow: scroll;
   max-height: 60px;
   transition: max-height 500ms ease-in-out;
 }
 #Experiences__header {
-  background-color: violet;
-  cursor: pointer;
+  background-color: #92D050;
   box-shadow: 0px 0px 0px black;
   border-radius: 10px;
-  position: relative;
+  position: sticky;
+  top: 0px;
   display: flex;
   height: 60px;
   transition: box-shadow 350ms 150ms;
@@ -128,22 +172,30 @@ footer {
   align-self: center;
   font-size: 20px;
 }
+#Experiences__header__title > i::before {
+  width: 600px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 25px;
+}
 #Experiences__header__title h3 {
   margin-left: 10px;
 }
 #Experiences__header .fa-arrow-circle-up {
   position: absolute;
-  right: 0;
+  right: 10px;
   align-self: center;
   font-size: 30px;
   transform: rotate(0turn);
   transition: transform 300ms;
 }
 #Experiences__content {
-  padding: 5px;
+  padding: 5px 25px;
+  border-radius: 10px;
+  box-shadow: #4068AE 2px 2px 5px 0px inset, #4068AE 2px 2px 5px 0px inset;
 }
 #Experiences.IsOpen {
-  max-height: 800px;
+  max-height: 400px;
 }
 #Experiences.IsOpen #Experiences__header {
   box-shadow: 5px 5px 20px black;
@@ -153,21 +205,20 @@ footer {
 }
 
 #Formations {
-  background-color: red;
+  background-color: #92D050;
   border-radius: 10px;
   padding: 5px;
-  padding: 0;
   margin: 5px;
-  overflow: hidden;
+  overflow: scroll;
   max-height: 60px;
   transition: max-height 500ms ease-in-out;
 }
 #Formations__header {
-  background-color: red;
-  cursor: pointer;
+  background-color: #92D050;
   box-shadow: 0px 0px 0px black;
   border-radius: 10px;
-  position: relative;
+  position: sticky;
+  top: 0px;
   display: flex;
   height: 60px;
   transition: box-shadow 350ms 150ms;
@@ -181,22 +232,30 @@ footer {
   align-self: center;
   font-size: 20px;
 }
+#Formations__header__title > i::before {
+  width: 600px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 25px;
+}
 #Formations__header__title h3 {
   margin-left: 10px;
 }
 #Formations__header .fa-arrow-circle-up {
   position: absolute;
-  right: 0;
+  right: 10px;
   align-self: center;
   font-size: 30px;
   transform: rotate(0turn);
   transition: transform 300ms;
 }
 #Formations__content {
-  padding: 5px;
+  padding: 5px 25px;
+  border-radius: 10px;
+  box-shadow: #4068AE 2px 2px 5px 0px inset, #4068AE 2px 2px 5px 0px inset;
 }
 #Formations.IsOpen {
-  max-height: 700px;
+  max-height: 400px;
 }
 #Formations.IsOpen #Formations__header {
   box-shadow: 5px 5px 20px black;
@@ -206,21 +265,20 @@ footer {
 }
 
 #Competences {
-  background-color: aqua;
+  background-color: #92D050;
   border-radius: 10px;
   padding: 5px;
-  padding: 0;
   margin: 5px;
-  overflow: hidden;
+  overflow: scroll;
   max-height: 60px;
   transition: max-height 500ms ease-in-out;
 }
 #Competences__header {
-  background-color: aqua;
-  cursor: pointer;
+  background-color: #92D050;
   box-shadow: 0px 0px 0px black;
   border-radius: 10px;
-  position: relative;
+  position: sticky;
+  top: 0px;
   display: flex;
   height: 60px;
   transition: box-shadow 350ms 150ms;
@@ -234,19 +292,27 @@ footer {
   align-self: center;
   font-size: 20px;
 }
+#Competences__header__title > i::before {
+  width: 600px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 25px;
+}
 #Competences__header__title h3 {
   margin-left: 10px;
 }
 #Competences__header .fa-arrow-circle-up {
   position: absolute;
-  right: 0;
+  right: 10px;
   align-self: center;
   font-size: 30px;
   transform: rotate(0turn);
   transition: transform 300ms;
 }
 #Competences__content {
-  padding: 5px;
+  padding: 5px 25px;
+  border-radius: 10px;
+  box-shadow: #4068AE 2px 2px 5px 0px inset, #4068AE 2px 2px 5px 0px inset;
 }
 #Competences.IsOpen {
   max-height: 300px;
@@ -259,21 +325,20 @@ footer {
 }
 
 #SoftSkills {
-  background-color: orange;
+  background-color: #92D050;
   border-radius: 10px;
   padding: 5px;
-  padding: 0;
   margin: 5px;
-  overflow: hidden;
+  overflow: scroll;
   max-height: 60px;
   transition: max-height 500ms ease-in-out;
 }
 #SoftSkills__header {
-  background-color: orange;
-  cursor: pointer;
+  background-color: #92D050;
   box-shadow: 0px 0px 0px black;
   border-radius: 10px;
-  position: relative;
+  position: sticky;
+  top: 0px;
   display: flex;
   height: 60px;
   transition: box-shadow 350ms 150ms;
@@ -287,19 +352,27 @@ footer {
   align-self: center;
   font-size: 20px;
 }
+#SoftSkills__header__title > i::before {
+  width: 600px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 25px;
+}
 #SoftSkills__header__title h3 {
   margin-left: 10px;
 }
 #SoftSkills__header .fa-arrow-circle-up {
   position: absolute;
-  right: 0;
+  right: 10px;
   align-self: center;
   font-size: 30px;
   transform: rotate(0turn);
   transition: transform 300ms;
 }
 #SoftSkills__content {
-  padding: 5px;
+  padding: 5px 25px;
+  border-radius: 10px;
+  box-shadow: #4068AE 2px 2px 5px 0px inset, #4068AE 2px 2px 5px 0px inset;
 }
 #SoftSkills.IsOpen {
   max-height: 300px;
@@ -312,21 +385,20 @@ footer {
 }
 
 #Interets {
-  background-color: teal;
+  background-color: #92D050;
   border-radius: 10px;
   padding: 5px;
-  padding: 0;
   margin: 5px;
-  overflow: hidden;
+  overflow: scroll;
   max-height: 60px;
   transition: max-height 500ms ease-in-out;
 }
 #Interets__header {
-  background-color: teal;
-  cursor: pointer;
+  background-color: #92D050;
   box-shadow: 0px 0px 0px black;
   border-radius: 10px;
-  position: relative;
+  position: sticky;
+  top: 0px;
   display: flex;
   height: 60px;
   transition: box-shadow 350ms 150ms;
@@ -340,19 +412,27 @@ footer {
   align-self: center;
   font-size: 20px;
 }
+#Interets__header__title > i::before {
+  width: 600px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 25px;
+}
 #Interets__header__title h3 {
   margin-left: 10px;
 }
 #Interets__header .fa-arrow-circle-up {
   position: absolute;
-  right: 0;
+  right: 10px;
   align-self: center;
   font-size: 30px;
   transform: rotate(0turn);
   transition: transform 300ms;
 }
 #Interets__content {
-  padding: 5px;
+  padding: 5px 25px;
+  border-radius: 10px;
+  box-shadow: #4068AE 2px 2px 5px 0px inset, #4068AE 2px 2px 5px 0px inset;
 }
 #Interets.IsOpen {
   max-height: 300px;
@@ -365,21 +445,20 @@ footer {
 }
 
 #Realisations {
-  background-color: palevioletred;
+  background-color: #92D050;
   border-radius: 10px;
   padding: 5px;
-  padding: 0;
   margin: 5px;
-  overflow: hidden;
+  overflow: scroll;
   max-height: 60px;
   transition: max-height 500ms ease-in-out;
 }
 #Realisations__header {
-  background-color: palevioletred;
-  cursor: pointer;
+  background-color: #92D050;
   box-shadow: 0px 0px 0px black;
   border-radius: 10px;
-  position: relative;
+  position: sticky;
+  top: 0px;
   display: flex;
   height: 60px;
   transition: box-shadow 350ms 150ms;
@@ -393,19 +472,27 @@ footer {
   align-self: center;
   font-size: 20px;
 }
+#Realisations__header__title > i::before {
+  width: 600px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 25px;
+}
 #Realisations__header__title h3 {
   margin-left: 10px;
 }
 #Realisations__header .fa-arrow-circle-up {
   position: absolute;
-  right: 0;
+  right: 10px;
   align-self: center;
   font-size: 30px;
   transform: rotate(0turn);
   transition: transform 300ms;
 }
 #Realisations__content {
-  padding: 5px;
+  padding: 5px 25px;
+  border-radius: 10px;
+  box-shadow: #4068AE 2px 2px 5px 0px inset, #4068AE 2px 2px 5px 0px inset;
 }
 #Realisations.IsOpen {
   max-height: 300px;

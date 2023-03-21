@@ -9,7 +9,7 @@ function Interets() {
             <div id="Interets__header" onClick={() => setIsOpen(isOpen ? false : true)}>
 
                 <div id="Interets__header__title">
-                    <i className="fas fa-fist-raised"></i>
+                    <i className="fas fa-gamepad"></i>
                     <h3>Intérets</h3>
                 </div>
 
