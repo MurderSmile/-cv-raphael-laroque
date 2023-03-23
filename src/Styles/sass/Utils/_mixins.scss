@@ -3,7 +3,7 @@
     border-radius: $radius;
     padding: $padding;
     margin: $margin;
-    overflow: scroll;
+    overflow: hidden;
     max-height: 60px;
     transition: max-height 500ms ease-in-out;
 
@@ -22,16 +22,15 @@
             align-items: center;
             padding: 10px;
 
-            >i {
-                align-self: center;
+            i {
+                display: flex;
                 font-size: 20px;
-
-                &::before {
-                    width: 600px;
-                    background-color: white;
-                    padding: $padding;
-                    border-radius: 25px;
-                }
+                background-color: white;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 25px;
             }
 
             h3 {
@@ -52,9 +51,15 @@
     }
 
     &__content {
+        background-color: #D1D3D4;
+        overflow: scroll;
+        max-height: $height*0.7;
         padding: $padding $padding*5;
+        text-overflow: ellipsis;
         border-radius: $radius;
-        box-shadow: #4068AE 2px 2px 5px 0px inset, #4068AE 2px 2px 5px 0px inset;
+        box-shadow: #4068AE 2px 2px 5px 0px inset, #92D050 2px 2px 5px 0px inset;
+        scrollbar-color: #92D050 #4068AE;
+        scrollbar-width: auto;
     }
 
     &.IsOpen {

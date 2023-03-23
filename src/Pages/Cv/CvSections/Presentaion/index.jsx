@@ -16,24 +16,23 @@ function Presentation() {
 
             </div>
 
-            <ul>
+            <ul id="Presentation__description">
                 <li>Français</li>
                 <li>27 ans</li>
                 <li>Bordeaux, France</li>
                 <li>Permis B</li>
+            </ul>
 
-                <li><a href="tel:+33628515565">
-                    <i class="fas fa-chevron-right"></i>
+            <ul id="Presentation__contacts">
+                <li><i class="fas fa-phone-square-alt"></i><a href="tel:+33628515565">
                     06 28 51 55 65
                 </a></li>
 
-                <li><a href="mailto:raphael.Laroque@yahoo.fr">
-                    <i class="fas fa-chevron-right"></i>
+                <li><i class="fas fa-envelope"></i><a href="mailto:raphael.Laroque@yahoo.fr">
                     raphael.Laroque@yahoo.fr
                 </a></li>
 
-                <li><a href="https://www.linkedin.com/in/raphael-laroque/?originalSubdomain=fr">
-                    <i class="fas fa-chevron-right"></i>
+                <li><i className="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/raphael-laroque/?originalSubdomain=fr">
                     www.linkedin.com/in/raphael-laroque
                 </a></li>
             </ul>

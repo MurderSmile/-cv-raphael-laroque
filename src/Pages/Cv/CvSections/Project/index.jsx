@@ -2,12 +2,12 @@ import { useContext } from "react"
 
 import { ProjectContext } from "../../../../Utils/Context/index";
 
-function Descriptif() {
+function Project() {
 
     const { project, setProject } = useContext(ProjectContext)
 
     return (
-        <div className="fond">
+        <div className="Project">
             <div className="Descriptif">
 
                 <div className="apercu">
@@ -25,4 +25,4 @@ function Descriptif() {
     )
 }
 
-export default Descriptif
+export default Project

@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background-color: #595959;
+    //background: linear-gradient(0deg, rgba(89, 89, 89, 1) 38%, rgba(230, 231, 232, 1) 62%);
 }
 
 header {
@@ -71,7 +72,8 @@ $margin: 5px;
 
     ul {
         list-style-type: none;
-
+        justify-self: flex-start;
+        background-color: #92D050;
     }
 
     button {
@@ -97,12 +99,12 @@ $margin: 5px;
     //order: 4;
     //grid-column: 2 / 3;
     //grid-row: 2 / 4;
-    @include section-mobile("Experiences", #92D050, 400px);
+    @include section-mobile("Experiences", #92D050, 500px);
 }
 
 #Formations {
     //order: 5;    
-    @include section-mobile("Formations", #92D050, 400px);
+    @include section-mobile("Formations", #92D050, 500px);
 }
 
 #Competences {
@@ -125,23 +127,26 @@ $margin: 5px;
     //grid-column: 2 / 4;
     @include section-mobile("Realisations", #92D050, 300px);
 
-
-    ul {
-        li {
-            cursor: pointer;
-        }
+    button {
+        background-color: #4068AE;
+        color: white;
+        cursor: pointer;
+        border: 5px black double;
+        border-radius: $radius;
+        padding: $padding*2;
+        margin: 5px;
     }
 }
 
-.fond {
+.Project {
+    background-color: black;
     position: fixed;
-    bottom: 0;
-    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    top: 0%;
+    bottom: 0%;
 
     .Descriptif {
         display: flex;
@@ -151,6 +156,8 @@ $margin: 5px;
         background-color: white;
         color: black;
         width: 90%;
+        height: 500px;
+        overflow: scroll;
 
         img {
             width: 200px;

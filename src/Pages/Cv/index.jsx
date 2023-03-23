@@ -6,15 +6,17 @@ import Competences from "./CvSections/Competences";
 import SoftSkills from "./CvSections/SoftSkills";
 import Interets from "./CvSections/interets";
 import Realisations from "./CvSections/Realisations";
-import Descriptif from "./CvSections/Descriptif";
 
 import { useContext } from "react";
-import { ProjectContext } from "../../Utils/Context/index";
+
+import Project from "./CvSections/Project";
+
+import { ProjectContext } from "../../Utils/Context";
 
 
 function Cv() {
-
     const { project } = useContext(ProjectContext)
+
 
     return (
         <div id="Cv">
@@ -26,7 +28,7 @@ function Cv() {
             <SoftSkills />
             <Interets />
             <Realisations />
-            {project && project != null ? <Descriptif /> : null}
+            {project && project != null ? <Project /> : null}
         </div>
     )
 }

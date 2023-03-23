@@ -24,12 +24,13 @@ function Realisations() {
 
             <ul id="Realisations__content">
                 {projects.map((project) =>
-                    <li key={project.name} onClick={(e) => {
-                        e.stopPropagation()
-                        setProject(project)
-                    }}>
-                        {project.name}
+
+                    <li>
+                        <button key={project.name} onClick={() => { setProject(project) }}>
+                            {project.name}
+                        </button>
                     </li>
+
                 )}
             </ul>
         </section>
