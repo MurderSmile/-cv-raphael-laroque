@@ -25,8 +25,8 @@ function Realisations() {
             <ul id="Realisations__content">
                 {projects.map((project) =>
 
-                    <li>
-                        <button key={project.name} onClick={() => { setProject(project) }}>
+                    <li key={project.name}>
+                        <button onClick={() => { setProject(project) }}>
                             {project.name}
                         </button>
                     </li>

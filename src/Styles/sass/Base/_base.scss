@@ -11,9 +11,22 @@ header {
 }
 
 footer {
+    border-top: 5px solid white;
     display: flex;
-    background-color: aqua;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #595959;
+    height: 100px;
     bottom: 0;
+
+    a {
+        color: white;
+
+        i {
+            font-size: 50px;
+        }
+    }
+
 }
 
 $radius: 10px;
@@ -23,13 +36,14 @@ $margin: 5px;
 // Section CV //
 #Cv {
     display: grid;
-    //grid-template: repeat(3, auto) / repeat(3, auto);
-    grid-gap: 5px
+    grid-gap: 5px;
+
+    @media screen and (min-width: 641px) {
+        grid-template: repeat(3, auto) / repeat(3, auto);
+    }
 }
 
 #Presentation {
-    //grid-column: 1 / 4;
-    //order: 0;
     background-color: #4068AE;
     color: white;
     border-radius: $radius;
@@ -37,8 +51,13 @@ $margin: 5px;
     flex-direction: column;
     align-items: center;
     //justify-content: space-around;
-    padding: $padding;
+    padding: $padding*3;
     margin: $margin;
+
+    @media screen and (min-width: 641px) {
+        grid-column: 1 / 4;
+        order: 0;
+    }
 
     &__name {
         display: flex;
@@ -49,7 +68,6 @@ $margin: 5px;
             width: 150px;
             border: #E6E7E8 6px solid;
             box-shadow: 5px 5px black;
-            //border-radius: 40% 60% 26% 74% / 60% 20% 80% 40%;
             animation: image 5000ms both infinite alternate ease-in-out;
         }
 
@@ -63,24 +81,59 @@ $margin: 5px;
 
     a {
         text-decoration: none;
-        color: white;
-
-        i {
-            margin-right: 5px
-        }
     }
 
     ul {
         list-style-type: none;
         justify-self: flex-start;
         background-color: #92D050;
+        border: 5px double #4068AE;
+        padding: 10px;
+        border-radius: 25px;
+        // box-shadow: #92D050 5px 5px, #4068AE 10px 10px;
+        box-shadow: rgba(146, 208, 80, 0.4) 5px 5px;
+
+        li {
+            display: flex;
+            align-items: center;
+            color: black;
+
+            i {
+                display: flex;
+                margin: 5px;
+                color: white;
+                background-color: black;
+                height: 30px;
+                width: 30px;
+                border-radius: 25px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            a {
+                width: 200px;
+            }
+        }
     }
 
-    button {
-        padding: 5px;
+    a {
 
-        a {
-            color: black;
+        color: black;
+
+        button {
+            padding: $padding*3;
+            background-color: white;
+            border-radius: 25px;
+            border: #92D050 5px double;
+            cursor: pointer;
+            box-shadow: 3px 3px 10px black;
+            transition: box-shadow 100ms;
+
+            &:active {
+                box-shadow: none;
+                box-shadow: 0px 0px 0px black;
+                translate: 3px 3px;
+            }
 
             i {
                 margin-right: 5px
@@ -91,51 +144,115 @@ $margin: 5px;
 }
 
 #Profil {
-    //order: 2;
-    @include section-mobile("Profil", #92D050, 300px);
+
+    @media screen and (max-width: 640px) {
+        @include section-mobile("Profil", rgb(0, 0, 0), 300px);
+    }
+
+    @media screen and (min-width: 641px) {
+        order: 2;
+        @include section-desktop()
+    }
+
 }
 
 #Experiences {
-    //order: 4;
-    //grid-column: 2 / 3;
-    //grid-row: 2 / 4;
-    @include section-mobile("Experiences", #92D050, 500px);
+
+    @media screen and (max-width: 640px) {
+        @include section-mobile("Experiences", #ff0000, 500px);
+    }
+
+    @media screen and (min-width: 641px) {
+        order: 4;
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+        @include section-desktop()
+    }
 }
 
 #Formations {
-    //order: 5;    
-    @include section-mobile("Formations", #92D050, 500px);
+
+    @media screen and (max-width: 640px) {
+        @include section-mobile("Formations", #9500a8, 500px);
+    }
+
+    @media screen and (min-width: 641px) {
+        order: 5;
+        @include section-desktop()
+    }
 }
 
 #Competences {
-    //order: 3;
-    @include section-mobile("Competences", #92D050, 300px);
+
+    @media screen and (max-width: 640px) {
+        @include section-mobile("Competences", #0eb0e2, 300px);
+    }
+
+    @media screen and (min-width: 641px) {
+        order: 3;
+        @include section-desktop()
+    }
 }
 
 #SoftSkills {
-    //order: 6;
-    @include section-mobile("SoftSkills", #92D050, 300px);
+
+    @media screen and (max-width: 640px) {
+        @include section-mobile("SoftSkills", #f0fc01, 300px);
+    }
+
+    @media screen and (min-width: 641px) {
+        order: 6;
+        @include section-desktop()
+    }
 }
 
 #Interets {
-    //order: 7;
-    @include section-mobile("Interets", #92D050, 300px);
+
+    @media screen and (max-width: 640px) {
+        @include section-mobile("Interets", #eb43b0, 300px);
+    }
+
+    @media screen and (min-width: 641px) {
+        order: 7;
+        @include section-desktop()
+    }
 }
 
 #Realisations {
-    //order: 8;
-    //grid-column: 2 / 4;
-    @include section-mobile("Realisations", #92D050, 300px);
 
-    button {
-        background-color: #4068AE;
-        color: white;
-        cursor: pointer;
-        border: 5px black double;
-        border-radius: $radius;
-        padding: $padding*2;
-        margin: 5px;
+    @media screen and (max-width: 640px) {
+        @include section-mobile("Realisations", #cf7500, 300px);
     }
+
+    @media screen and (min-width: 641px) {
+        order: 8;
+        grid-column: 2 / 4;
+        @include section-desktop()
+    }
+
+    ul {
+        list-style-type: none;
+
+        @media screen and (min-width: 641px) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        li {
+
+            button {
+                background-color: #4068AE;
+                color: white;
+                cursor: pointer;
+                border: 5px black double;
+                border-radius: $radius;
+                margin: 5px;
+                padding: $padding*2;
+            }
+        }
+    }
+
 }
 
 .Project {

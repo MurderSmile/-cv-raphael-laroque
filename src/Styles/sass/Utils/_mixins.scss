@@ -1,5 +1,8 @@
+$colour-mixin-primary: #92D050;
+$colour-mixin-secondary: #4068AE;
+
 @mixin section-mobile ($name, $colour, $height) {
-    background-color: $colour;
+    background-color: $colour-mixin-primary;
     border-radius: $radius;
     padding: $padding;
     margin: $margin;
@@ -8,11 +11,82 @@
     transition: max-height 500ms ease-in-out;
 
     &__header {
-        background-color: $colour;
+        background-color: $colour-mixin-primary;
         box-shadow: 0px 0px 0px black;
         border-radius: $radius;
-        position: sticky;
-        top: 0px;
+        display: flex;
+        height: 60px;
+        transition: box-shadow 350ms 150ms;
+
+        &__title {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+
+            i {
+                display: flex;
+                font-size: 20px;
+                background-color: white;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 25px;
+                border: 5px solid $colour;
+            }
+
+            h3 {
+                margin-left: 10px;
+            }
+        }
+
+        .fa-arrow-circle-up {
+            position: absolute;
+            right: 10px;
+            align-self: center;
+            font-size: 30px;
+            margin-right: 10px;
+            transform: rotate(0turn);
+            transition: transform 300ms;
+
+        }
+    }
+
+    &__content {
+        background-color: #D1D3D4;
+        overflow: scroll;
+        max-height: $height*0.7;
+        padding: $padding $padding*5;
+        text-overflow: ellipsis;
+        border-radius: $radius;
+        box-shadow: $colour 2px 2px 5px 0px inset, $colour-mixin-primary 2px 2px 5px 0px inset;
+    }
+
+    &.IsOpen {
+        max-height: $height;
+
+        ##{$name}__header {
+            box-shadow: 5px 5px 20px black;
+
+            .fa-arrow-circle-up {
+                transform: rotate(0.5turn);
+            }
+
+        }
+    }
+}
+
+@mixin section-desktop () {
+
+    background-color: $colour-mixin-primary;
+    border-radius: $radius;
+    padding: $padding;
+    margin: $margin;
+
+    &__header {
+        background-color: $colour-mixin-primary;
+        box-shadow: 0px 0px 0px black;
+        border-radius: $radius;
         display: flex;
         height: 60px;
         transition: box-shadow 350ms 150ms;
@@ -39,39 +113,14 @@
         }
 
         .fa-arrow-circle-up {
-            position: absolute;
-            right: 10px;
-            align-self: center;
-            font-size: 30px;
-
-            transform: rotate(0turn);
-            transition: transform 300ms;
-
+            display: none;
         }
     }
 
     &__content {
         background-color: #D1D3D4;
-        overflow: scroll;
-        max-height: $height*0.7;
         padding: $padding $padding*5;
-        text-overflow: ellipsis;
         border-radius: $radius;
-        box-shadow: #4068AE 2px 2px 5px 0px inset, #92D050 2px 2px 5px 0px inset;
-        scrollbar-color: #92D050 #4068AE;
-        scrollbar-width: auto;
-    }
-
-    &.IsOpen {
-        max-height: $height;
-
-        ##{$name}__header {
-            box-shadow: 5px 5px 20px black;
-
-            .fa-arrow-circle-up {
-                transform: rotate(0.5turn);
-            }
-
-        }
+        box-shadow: $colour-mixin-secondary 2px 2px 5px 0px inset, $colour-mixin-primary 2px 2px 5px 0px inset;
     }
 }
