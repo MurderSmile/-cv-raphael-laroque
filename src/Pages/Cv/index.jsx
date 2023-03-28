@@ -6,11 +6,9 @@ import Competences from "./CvSections/Competences";
 import SoftSkills from "./CvSections/SoftSkills";
 import Interets from "./CvSections/interets";
 import Realisations from "./CvSections/Realisations";
-import Footer from "../../Components/Footer";
+import Project from "./CvSections/Project";
 
 import { useContext } from "react";
-
-import Project from "./CvSections/Project";
 
 import { ProjectContext } from "../../Utils/Context";
 
@@ -30,7 +28,6 @@ function Cv() {
             <Interets />
             <Realisations />
             {project && project != null ? <Project /> : null}
-            <Footer />
         </div>
     )
 }

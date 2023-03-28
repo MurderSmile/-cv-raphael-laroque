@@ -53,13 +53,17 @@ $colour-mixin-secondary: #4068AE;
     }
 
     &__content {
+
         background-color: #D1D3D4;
         overflow: scroll;
         max-height: $height*0.7;
-        padding: $padding $padding*5;
-        text-overflow: ellipsis;
+        padding: $padding*4 $padding*4;
         border-radius: $radius;
         box-shadow: $colour 2px 2px 5px 0px inset, $colour-mixin-primary 2px 2px 5px 0px inset;
+
+        li {
+            margin: 5px;
+        }
     }
 
     &.IsOpen {
@@ -76,8 +80,7 @@ $colour-mixin-secondary: #4068AE;
     }
 }
 
-@mixin section-desktop () {
-
+@mixin section-desktop ($name, $colour, $height) {
     background-color: $colour-mixin-primary;
     border-radius: $radius;
     padding: $padding;
@@ -85,11 +88,9 @@ $colour-mixin-secondary: #4068AE;
 
     &__header {
         background-color: $colour-mixin-primary;
-        box-shadow: 0px 0px 0px black;
         border-radius: $radius;
         display: flex;
         height: 60px;
-        transition: box-shadow 350ms 150ms;
 
         &__title {
             display: flex;
@@ -105,6 +106,7 @@ $colour-mixin-secondary: #4068AE;
                 width: 30px;
                 height: 30px;
                 border-radius: 25px;
+                border: 5px solid $colour;
             }
 
             h3 {
@@ -118,9 +120,15 @@ $colour-mixin-secondary: #4068AE;
     }
 
     &__content {
+
         background-color: #D1D3D4;
-        padding: $padding $padding*5;
+        padding: $padding*4 $padding*4;
         border-radius: $radius;
-        box-shadow: $colour-mixin-secondary 2px 2px 5px 0px inset, $colour-mixin-primary 2px 2px 5px 0px inset;
+        box-shadow: $colour 2px 2px 5px 0px inset, $colour-mixin-primary 2px 2px 5px 0px inset;
+
+        li {
+            margin: 5px;
+        }
     }
+
 }

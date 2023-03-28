@@ -1,7 +1,6 @@
 body {
     margin: 0;
     background-color: #595959;
-    //background: linear-gradient(0deg, rgba(89, 89, 89, 1) 38%, rgba(230, 231, 232, 1) 62%);
 }
 
 header {
@@ -18,6 +17,11 @@ footer {
     background-color: #595959;
     height: 100px;
     bottom: 0;
+
+    @media screen and (min-width: 680px) {
+        grid-column: 1 / 4;
+        grid-row: 7 / 8;
+    }
 
     a {
         color: white;
@@ -38,8 +42,8 @@ $margin: 5px;
     display: grid;
     grid-gap: 5px;
 
-    @media screen and (min-width: 641px) {
-        grid-template: repeat(3, auto) / repeat(3, auto);
+    @media screen and (min-width: 680px) {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -50,13 +54,12 @@ $margin: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    //justify-content: space-around;
     padding: $padding*3;
     margin: $margin;
 
-    @media screen and (min-width: 641px) {
+    @media screen and (min-width: 680px) {
         grid-column: 1 / 4;
-        order: 0;
+        grid-row: 1 / 2;
     }
 
     &__name {
@@ -75,6 +78,13 @@ $margin: 5px;
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            h2 {
+                display: flex;
+                justify-content: center;
+                background-color: #9500a8;
+
+            }
         }
 
     }
@@ -90,7 +100,6 @@ $margin: 5px;
         border: 5px double #4068AE;
         padding: 10px;
         border-radius: 25px;
-        // box-shadow: #92D050 5px 5px, #4068AE 10px 10px;
         box-shadow: rgba(146, 208, 80, 0.4) 5px 5px;
 
         li {
@@ -136,7 +145,8 @@ $margin: 5px;
             }
 
             i {
-                margin-right: 5px
+                margin-right: 5px;
+                font-size: 1.4em;
             }
         }
     }
@@ -145,95 +155,99 @@ $margin: 5px;
 
 #Profil {
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 679px) {
         @include section-mobile("Profil", rgb(0, 0, 0), 300px);
     }
 
-    @media screen and (min-width: 641px) {
-        order: 2;
-        @include section-desktop()
+    @media screen and (min-width: 680px) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        @include section-desktop("Profil", rgb(0, 0, 0), 300px)
     }
 
 }
 
 #Experiences {
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 679px) {
         @include section-mobile("Experiences", #ff0000, 500px);
     }
 
-    @media screen and (min-width: 641px) {
-        order: 4;
+    @media screen and (min-width: 680px) {
         grid-column: 2 / 3;
-        grid-row: 2 / 4;
-        @include section-desktop()
+        grid-row: 2 / 5;
+        @include section-desktop("Experiences", #ff0000, 500px)
     }
 }
 
 #Formations {
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 679px) {
         @include section-mobile("Formations", #9500a8, 500px);
     }
 
-    @media screen and (min-width: 641px) {
-        order: 5;
-        @include section-desktop()
+    @media screen and (min-width: 680px) {
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+        @include section-desktop("Formations", #9500a8, 500px)
     }
 }
 
 #Competences {
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 679px) {
         @include section-mobile("Competences", #0eb0e2, 300px);
     }
 
-    @media screen and (min-width: 641px) {
-        order: 3;
-        @include section-desktop()
+    @media screen and (min-width: 680px) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        @include section-desktop("Competences", #0eb0e2, 300px)
     }
 }
 
 #SoftSkills {
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 679px) {
         @include section-mobile("SoftSkills", #f0fc01, 300px);
     }
 
-    @media screen and (min-width: 641px) {
-        order: 6;
-        @include section-desktop()
+    @media screen and (min-width: 680px) {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        @include section-desktop("SoftSkills", #f0fc01, 300px)
     }
 }
 
 #Interets {
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 679px) {
         @include section-mobile("Interets", #eb43b0, 300px);
     }
 
-    @media screen and (min-width: 641px) {
-        order: 7;
-        @include section-desktop()
+    @media screen and (min-width: 680px) {
+        grid-column: 3 / 4;
+        grid-row: 4 / 5;
+        @include section-desktop("Interets", #eb43b0, 300px)
     }
 }
 
 #Realisations {
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 679px) {
         @include section-mobile("Realisations", #cf7500, 300px);
     }
 
-    @media screen and (min-width: 641px) {
-        order: 8;
-        grid-column: 2 / 4;
-        @include section-desktop()
+    @media screen and (min-width: 680px) {
+        grid-column: 1 / 4;
+        grid-row: 5 / 6;
+        @include section-desktop("Realisations", #cf7500, 300px)
     }
 
     ul {
         list-style-type: none;
 
-        @media screen and (min-width: 641px) {
+        @media screen and (min-width: 680px) {
             display: flex;
             justify-content: space-around;
             align-items: center;
