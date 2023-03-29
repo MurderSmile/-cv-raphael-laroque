@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 
 import { ProjectProvider } from "./Utils/Context/index";
 
-//import Header from "./Components/Header";
+import Header from "./Components/Header";
 import Loading from "./Components/Loading";
 import Cv from './Pages/Cv/index';
 import Footer from "./Components/Footer";
@@ -16,7 +16,7 @@ root.render(
 
     <ProjectProvider>
 
-      {/*<Header />*/}
+      {<Header />}
       {<Loading />}
       {<Cv />}
       {<Footer />}

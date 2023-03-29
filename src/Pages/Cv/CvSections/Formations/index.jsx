@@ -27,6 +27,7 @@ function Formations() {
                         </div>
                         <p>
                             Formation basée sur des projets professionnalisants, mentorés par un expert :
+                            <br />
                             Création d’un réseau social d’entreprise, optimisation SEO, création du backend pour un site de partage d’avis, création de la partie Js pour un site de vente, etc...
                             <br />
                             Portfolio sur https://github.com/MurderSmile
@@ -42,6 +43,7 @@ function Formations() {
                         </div>
                         <p>
                             Formation ayant permis l’acquisition de certaines compétences et soft skills :
+                            <br />
                             Suivi du cahier des charges, sens du détail, état d’esprit consciencieux, etc…
                         </p>
                     </div>

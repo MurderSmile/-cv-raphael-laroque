@@ -3,39 +3,6 @@ body {
     background-color: #595959;
 }
 
-header {
-    display: flex;
-    background-color: aqua;
-    top: 0;
-}
-
-footer {
-    border-top: 5px solid white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #595959;
-    height: 100px;
-    bottom: 0;
-
-    @media screen and (min-width: 680px) {
-        grid-column: 1 / 4;
-        grid-row: 7 / 8;
-    }
-
-    a {
-        color: white;
-
-        i {
-            font-size: 50px;
-        }
-    }
-
-}
-
-$radius: 10px;
-$padding: 5px;
-$margin: 5px;
 
 // Section CV //
 #Cv {
@@ -60,6 +27,8 @@ $margin: 5px;
     @media screen and (min-width: 680px) {
         grid-column: 1 / 4;
         grid-row: 1 / 2;
+        flex-direction: row;
+        justify-content: center;
     }
 
     &__name {
@@ -162,7 +131,7 @@ $margin: 5px;
     @media screen and (min-width: 680px) {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
-        @include section-desktop("Profil", rgb(0, 0, 0), 300px)
+        @include section-desktop("Profil", rgb(0, 0, 0))
     }
 
 }
@@ -176,7 +145,7 @@ $margin: 5px;
     @media screen and (min-width: 680px) {
         grid-column: 2 / 3;
         grid-row: 2 / 5;
-        @include section-desktop("Experiences", #ff0000, 500px)
+        @include section-desktop("Experiences", #ff0000)
     }
 }
 
@@ -189,7 +158,7 @@ $margin: 5px;
     @media screen and (min-width: 680px) {
         grid-column: 3 / 4;
         grid-row: 2 / 4;
-        @include section-desktop("Formations", #9500a8, 500px)
+        @include section-desktop("Formations", #9500a8)
     }
 }
 
@@ -202,7 +171,7 @@ $margin: 5px;
     @media screen and (min-width: 680px) {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
-        @include section-desktop("Competences", #0eb0e2, 300px)
+        @include section-desktop("Competences", #0eb0e2)
     }
 }
 
@@ -215,7 +184,7 @@ $margin: 5px;
     @media screen and (min-width: 680px) {
         grid-column: 1 / 2;
         grid-row: 4 / 5;
-        @include section-desktop("SoftSkills", #f0fc01, 300px)
+        @include section-desktop("SoftSkills", #f0fc01)
     }
 }
 
@@ -228,7 +197,7 @@ $margin: 5px;
     @media screen and (min-width: 680px) {
         grid-column: 3 / 4;
         grid-row: 4 / 5;
-        @include section-desktop("Interets", #eb43b0, 300px)
+        @include section-desktop("Interets", #eb43b0)
     }
 }
 
@@ -241,7 +210,7 @@ $margin: 5px;
     @media screen and (min-width: 680px) {
         grid-column: 1 / 4;
         grid-row: 5 / 6;
-        @include section-desktop("Realisations", #cf7500, 300px)
+        @include section-desktop("Realisations", #cf7500)
     }
 
     ul {

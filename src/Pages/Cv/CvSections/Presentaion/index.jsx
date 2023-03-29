@@ -9,11 +9,6 @@ function Presentation() {
 
                 <img src={PhotoProfil} alt="" />
 
-                <div>
-                    <h1>Raphaël Laroque</h1>
-                    <h2>Développeur Web junior</h2>
-                </div>
-
             </div>
 
             <ul id="Presentation__description">
@@ -21,9 +16,6 @@ function Presentation() {
                 <li><i className="fas fa-calendar-alt"></i>27 ans</li>
                 <li><i className="fas fa-home"></i>Bordeaux, France</li>
                 <li><i className="fas fa-car-side"></i>Permis B</li>
-                {/* </ul>
-
-            <ul id="Presentation__contacts"> */}
                 <li><i className="fas fa-phone-square-alt"></i><a href="tel:+33628515565">
                     06 28 51 55 65
                 </a></li>
@@ -35,6 +27,7 @@ function Presentation() {
                 <li><i className="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/raphael-laroque/?originalSubdomain=fr">
                     www.linkedin.com/in/raphael-laroque
                 </a></li>
+
             </ul>
 
             <a href={Cv}><button><i className="fas fa-file-download"></i>Télécharger la Version Papier</button></a>
