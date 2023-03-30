@@ -8,11 +8,11 @@ function loading() {
             <div className="logo">
 
                 <div className="logo__face logo__face__front">
-                    <img src={SmilePicture} alt="" />
+                    <img src={SmilePicture} alt="Chargement en cours" />
                 </div>
 
                 <div className="logo__face logo__face__back">
-                    <img src={EmailPicture} alt="" />
+                    <img src={EmailPicture} alt="Chargement en cours" />
                 </div>
 
             </div>

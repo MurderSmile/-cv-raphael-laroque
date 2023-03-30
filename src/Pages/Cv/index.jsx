@@ -4,7 +4,7 @@ import Experiences from "./CvSections/Experiences";
 import Formations from "./CvSections/Formations";
 import Competences from "./CvSections/Competences";
 import SoftSkills from "./CvSections/SoftSkills";
-import Interets from "./CvSections/interets";
+import Interets from "./CvSections/Interets";
 import Realisations from "./CvSections/Realisations";
 import Project from "./CvSections/Project";
 

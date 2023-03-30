@@ -27,12 +27,13 @@ function Realisations() {
 
                     <li key={project.name}>
                         <button onClick={() => { setProject(project) }}>
-                            {project.name}
+                            {project.icon} {project.name}
                         </button>
                     </li>
 
                 )}
             </ul>
+
         </section>
     )
 }

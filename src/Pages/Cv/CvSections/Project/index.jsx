@@ -7,21 +7,29 @@ function Project() {
     const { project, setProject } = useContext(ProjectContext)
 
     return (
-        <div className="Project">
+        <section className="Project">
+
             <div className="Descriptif">
 
-                <div className="apercu">
-                    <div className="exit" onClick={() => setProject(null)}>X</div>
+                <div className="Apercu">
+
+                    <button className="Apercu__exit" onClick={() => setProject(null)}>
+                        <i className="fas fa-times"></i>
+                    </button>
                     <h2>{project.name}</h2>
                     <img src={project.image} alt="" />
                 </div>
-                <p>{project.description}</p>
+
+                {project.description}
+
                 <div className="acces">
                     <button onClick={() => { window.location.href = project.github }}>GitHub</button>
                     {/* <button onClick={() => { window.location.href = project.network }}>Lien vers site</button>*/}
                 </div>
+
             </div>
-        </div>
+
+        </section>
     )
 }
 

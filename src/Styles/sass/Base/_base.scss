@@ -15,6 +15,7 @@ body {
 }
 
 #Presentation {
+    position: relative;
     background-color: #4068AE;
     color: white;
     border-radius: $radius;
@@ -27,69 +28,69 @@ body {
     @media screen and (min-width: 680px) {
         grid-column: 1 / 4;
         grid-row: 1 / 2;
-        flex-direction: row;
-        justify-content: center;
     }
 
-    &__name {
+    &__profil {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media screen and (min-width: 680px) {
+            flex-direction: row-reverse;
+        }
 
         img {
             width: 150px;
             border: #E6E7E8 6px solid;
             box-shadow: 5px 5px black;
-            animation: image 5000ms both infinite alternate ease-in-out;
-        }
+            object-fit: cover;
 
-        div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            h2 {
-                display: flex;
-                justify-content: center;
-                background-color: #9500a8;
-
-            }
-        }
-
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    ul {
-        list-style-type: none;
-        justify-self: flex-start;
-        background-color: #92D050;
-        border: 5px double #4068AE;
-        padding: 10px;
-        border-radius: 25px;
-        box-shadow: rgba(146, 208, 80, 0.4) 5px 5px;
-
-        li {
-            display: flex;
-            align-items: center;
-            color: black;
-
-            i {
-                display: flex;
-                margin: 5px;
-                color: white;
-                background-color: black;
-                height: 30px;
-                width: 30px;
-                border-radius: 25px;
-                justify-content: center;
-                align-items: center;
+            @media screen and (max-width: 679px) {
+                animation: image 5000ms both infinite alternate ease-in-out;
             }
 
-            a {
+            @media screen and (min-width: 680px) {
+                border-radius: 0% 100% 100% 0% / 50% 50% 50% 50%;
+                height: 300px;
                 width: 200px;
+            }
+        }
+
+
+        &__description {
+            list-style-type: none;
+            justify-self: flex-start;
+            background-color: #92D050;
+            border: 5px double #4068AE;
+            padding: 10px;
+            border-radius: 25px;
+            box-shadow: rgba(146, 208, 80, 0.4) 5px 5px;
+
+            @media screen and (min-width: 680px) {
+                border-radius: 25px 0px 0px 25px;
+                height: 285px;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                color: black;
+
+                i {
+                    display: flex;
+                    margin: 5px;
+                    color: white;
+                    background-color: black;
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 25px;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                a {
+                    width: 200px;
+                }
             }
         }
     }
@@ -97,6 +98,7 @@ body {
     a {
 
         color: black;
+        text-decoration: none;
 
         button {
             padding: $padding*3;
@@ -119,8 +121,8 @@ body {
             }
         }
     }
-
 }
+
 
 #Profil {
 
@@ -249,6 +251,7 @@ body {
     bottom: 0%;
 
     .Descriptif {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -257,16 +260,40 @@ body {
         color: black;
         width: 90%;
         height: 500px;
-        overflow: scroll;
 
         img {
-            width: 200px;
+            max-height: 200px;
+            max-width: 300px;
         }
 
-        .apercu {
+        .Apercu {
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            &__exit {
+                position: absolute;
+                background-color: #ff0000;
+                color: white;
+                top: 0;
+                right: 0;
+                font-size: 1.5em;
+                padding: 5px;
+            }
+
+            &__description {
+                display: flex;
+                flex-direction: column;
+                background-color: #92D050;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                max-height: 150px;
+
+
+                &:is(p, div p) {
+                    text-align: center;
+                }
+            }
         }
 
         .acces {

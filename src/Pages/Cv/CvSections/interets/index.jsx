@@ -18,10 +18,10 @@ function Interets() {
             </div>
 
             <ul id="Interets__content">
-                <li>Films/séries</li>
-                <li>Jeux Vidéos</li>
-                <li>Romans Graphiques</li>
-                <li>Musique</li>
+                <li>Films/séries: Horreur, divers, etc...</li>
+                <li>Jeux Vidéos: Solo, Divers, Uchronie...</li>
+                <li>Romans Graphiques: Thèmes divers...</li>
+                <li>Musiques: Pop, Rock...</li>
             </ul>
 
         </section>

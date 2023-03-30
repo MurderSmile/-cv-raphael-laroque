@@ -5,7 +5,7 @@ header {
     border-bottom: 5px solid white;
     background-color: #595959;
     color: white;
-    text-shadow: 2px 2px #4068AE, 3px 3px #92D050;
+    text-shadow: -2px -2px $colour-primary, 2px 2px $colour-secondary;
     height: auto;
     top: 0;
     text-align: center;

@@ -8,6 +8,48 @@
     }
 }
 
+@keyframes rotate_logo {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes border_logo_face {
+    0% {
+        border: 10px solid $colour-secondary;
+    }
+
+    50% {
+        border: 10px solid $colour-primary;
+    }
+
+    100% {
+        border: 10px solid $colour-secondary;
+    }
+}
+
+@keyframes loading_color {
+    0% {
+        background-color: $colour-primary;
+    }
+
+    50% {
+        background-color: $colour-secondary;
+    }
+
+    100% {
+        background-color: $colour-primary;
+    }
+}
+
 @keyframes image {
 
     0% {
