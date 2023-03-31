@@ -2,7 +2,7 @@ import OhmyfoodPicture from "../Assets/Ohmyfood.png";
 import KanapPicture from "../Assets/Kanap.png";
 import PantherePicture from "../Assets/Panthere.png";
 import PiiquantePicture from "../Assets/Piiquante.png";
-import GroupomaniaPicture from "../Assets/GroupomaniaOrange.png";
+import GroupomaniaPicture from "../Assets/iconCouleurPrimary.png";
 
 export const projects = [
     {
@@ -10,10 +10,12 @@ export const projects = [
         image: OhmyfoodPicture,
         icon: <i className="fas fa-utensils"></i>,
         description:
-            <p className="Apercu__description">
-                Le client est une startup sur le marché de la restauration du nom de Ohmyfood.
-                La commande est une maquette intéractive mobile-first, composé d'un index listant les restaurants participants, et de 4 pages restaurant/menu.
-            </p>,
+            <div className="Apercu__description">
+                <p>
+                    Le client est une startup sur le marché de la restauration du nom de Ohmyfood.
+                    La commande est une maquette intéractive mobile-first, composé d'un index listant les restaurants participants, et de 4 pages restaurant/menu.
+                </p>
+            </div>,
         github: 'https://github.com/MurderSmile/OC_Ohmyfood.git',
         //network:
     },
@@ -50,11 +52,13 @@ export const projects = [
         image: KanapPicture,
         icon: <i className="fas fa-couch"></i>,
         description:
-            <p className="Apercu__description">
-                Kanap, une entreprise de vente de canapés en boutique, souhaite avoir une plateforme de commerce en plus de sa boutique physique pour vendre ses produits sur Internet.
-                La partie HTML, CSS et Backend ont déjà été conçues.
-                L'objectif est de créer la partie javascript et les fonctionnalités qui feront les liens entre le frontend et le Backend du site.
-            </p>,
+            <div className="Apercu__description">
+                <p>
+                    Kanap, une entreprise de vente de canapés en boutique, souhaite avoir une plateforme de commerce en plus de sa boutique physique pour vendre ses produits sur Internet.
+                    La partie HTML, CSS et Backend ont déjà été conçues.
+                    L'objectif est de créer la partie javascript et les fonctionnalités qui feront les liens entre le frontend et le Backend du site.
+                </p>
+            </div>,
         github: 'https://github.com/MurderSmile/OC_Kanap.git',
         //network:
     },
@@ -64,11 +68,13 @@ export const projects = [
         image: PiiquantePicture,
         icon: <i className="fas fa-pepper-hot"></i>,
         description:
-            <p className="Apercu__description">
-                Piiquante une marque de condiments à base de piment, veut développer une application web de critique des sauces piquantes appelée « Hot Takes » .
-                La partie frontend a déjà été conçue.
-                L'objectif est de créer la partie backend en javascript et de la relier à un serveur (MongoDB pour ce projet).
-            </p>,
+            <div className="Apercu__description">
+                <p>
+                    Piiquante une marque de condiments à base de piment, veut développer une application web de critique des sauces piquantes appelée « Hot Takes » .
+                    La partie frontend a déjà été conçue.
+                    L'objectif est de créer la partie backend en javascript et de la relier à un serveur (MongoDB pour ce projet).
+                </p>
+            </div>,
         github: 'https://github.com/MurderSmile/OC_Piiquante.git',
         //network:
 

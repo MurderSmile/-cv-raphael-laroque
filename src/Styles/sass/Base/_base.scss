@@ -51,7 +51,7 @@ body {
 
             @media screen and (min-width: 680px) {
                 border-radius: 0% 100% 100% 0% / 50% 50% 50% 50%;
-                height: 300px;
+                height: 299px;
                 width: 200px;
             }
         }
@@ -149,31 +149,41 @@ body {
         grid-row: 2 / 5;
         @include section-desktop("Experiences", #ff0000)
     }
+
+    ul {
+        ul {
+            font-size: 1.1em;
+        }
+    }
 }
 
 #Formations {
 
     @media screen and (max-width: 679px) {
-        @include section-mobile("Formations", #9500a8, 500px);
+        @include section-mobile("Formations", #0eb0e2, 500px);
     }
 
     @media screen and (min-width: 680px) {
         grid-column: 3 / 4;
         grid-row: 2 / 4;
-        @include section-desktop("Formations", #9500a8)
+        @include section-desktop("Formations", #0eb0e2)
     }
 }
 
 #Competences {
 
     @media screen and (max-width: 679px) {
-        @include section-mobile("Competences", #0eb0e2, 300px);
+        @include section-mobile("Competences", #9500a8, 300px);
     }
 
     @media screen and (min-width: 680px) {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
-        @include section-desktop("Competences", #0eb0e2)
+        @include section-desktop("Competences", #9500a8)
+    }
+
+    span {
+        margin-right: 5px;
     }
 }
 
@@ -201,6 +211,15 @@ body {
         grid-row: 4 / 5;
         @include section-desktop("Interets", #eb43b0)
     }
+
+    li {
+        font-style: italic;
+
+        span {
+            font-style: normal;
+            font-weight: bold;
+        }
+    }
 }
 
 #Realisations {
@@ -216,13 +235,12 @@ body {
     }
 
     ul {
-        list-style-type: none;
 
-        @media screen and (min-width: 680px) {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style-type: none;
 
         li {
 
@@ -241,35 +259,46 @@ body {
 }
 
 .Project {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     display: flex;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 0%;
-    bottom: 0%;
 
     .Descriptif {
-        position: relative;
         display: flex;
+        position: fixed;
+        justify-self: center;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         background-color: white;
         color: black;
         width: 90%;
-        height: 500px;
+        max-height: 500px;
+        padding: $padding;
 
         img {
-            max-height: 200px;
-            max-width: 300px;
+            max-height: 150px;
+            max-width: 150px;
         }
 
         .Apercu {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: $margin*2;
+
+            h2 {
+                box-shadow: 5px 5px 5px black;
+                padding: $padding;
+                border-radius: $radius;
+            }
 
             &__exit {
                 position: absolute;
@@ -278,20 +307,23 @@ body {
                 top: 0;
                 right: 0;
                 font-size: 1.5em;
-                padding: 5px;
+                padding: 4px;
             }
 
             &__description {
                 display: flex;
                 flex-direction: column;
-                background-color: #92D050;
+                background-color: $colour-primary;
+                border: 5px solid black;
                 overflow-y: scroll;
                 overflow-x: hidden;
-                max-height: 150px;
+                scrollbar-color: $colour-secondary $colour-primary;
+                max-height: 400px;
+                padding: $padding;
 
-
-                &:is(p, div p) {
+                p {
                     text-align: center;
+                    font-size: 1.2em;
                 }
             }
         }
@@ -304,8 +336,15 @@ body {
             height: 150px;
 
             button {
-                height: 50px;
+                background-color: #4068AE;
+                color: white;
+                cursor: pointer;
+                border: 5px black double;
+                border-radius: $radius;
+                margin: 5px;
+                padding: $padding*2;
             }
         }
     }
+
 }

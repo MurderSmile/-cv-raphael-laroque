@@ -26,9 +26,11 @@ function Realisations() {
                 {projects.map((project) =>
 
                     <li key={project.name}>
+
                         <button onClick={() => { setProject(project) }}>
                             {project.icon} {project.name}
                         </button>
+
                     </li>
 
                 )}

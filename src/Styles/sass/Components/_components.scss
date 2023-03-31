@@ -1,0 +1,30 @@
+.progressbar {
+    background-color: #9500a8;
+    color: white;
+    padding: 3px;
+    text-align: right;
+    font-size: 20px;
+    border-radius: 15px;
+
+    &.fifty {
+        width: 55%;
+    }
+
+
+    &.sixty {
+        width: 65%;
+    }
+
+
+    &.seventy {
+        width: 75%;
+    }
+
+
+    &-wrapper {
+        background-color: $colour-primary;
+        border-radius: 15px;
+        box-shadow: 1Px 1px 3px #9500a8 inset, -1Px -1px 3px #9500a8 inset;
+        width: 200px;
+    }
+}

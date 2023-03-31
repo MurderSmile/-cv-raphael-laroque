@@ -1,7 +1,14 @@
 import PhotoProfil from "../../../../Assets/PhotoProfil.JPG";
 import Cv from "../../../../Assets/CV_Laroque_Raphaël.pdf";
 
+function getAge(date) {
+    let diff = Date.now() - date.getTime();
+    let age = new Date(diff);
+    return Math.abs(age.getUTCFullYear() - 1970);
+}
+
 function Presentation() {
+
     return (
         <section id="Presentation">
 
@@ -11,7 +18,7 @@ function Presentation() {
 
                 <ul id="Presentation__profil__description">
                     <li><i className="fas fa-user"></i>Français</li>
-                    <li><i className="fas fa-calendar-alt"></i>27 ans</li>
+                    <li><i className="fas fa-calendar-alt"></i>{getAge(new Date(1995, 10, 25))}ans</li>
                     <li><i className="fas fa-home"></i>Bordeaux, France</li>
                     <li><i className="fas fa-car-side"></i>Permis B</li>
                     <li><i className="fas fa-phone-square-alt"></i><a href="tel:+33628515565">

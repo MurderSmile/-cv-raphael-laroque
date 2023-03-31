@@ -16,6 +16,7 @@ function Project() {
                     <button className="Apercu__exit" onClick={() => setProject(null)}>
                         <i className="fas fa-times"></i>
                     </button>
+
                     <h2>{project.name}</h2>
                     <img src={project.image} alt="" />
                 </div>

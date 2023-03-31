@@ -19,19 +19,34 @@ function Competences() {
 
             <ul id="Competences__content">
                 <li>
-                    <div>Html 5 - Css 3</div>
+                    <span>Html 5 - Css 3</span>
+                    <div className="progressbar-wrapper">
+                        <div className="progressbar seventy">70%</div>
+                    </div>
                 </li>
                 <li>
-                    <div>Javascript</div>
+                    <span>Javascript</span>
+                    <div className="progressbar-wrapper">
+                        <div className="progressbar seventy">70%</div>
+                    </div>
                 </li>
                 <li>
-                    <div>React.js</div>
+                    <span>React.js</span>
+                    <div className="progressbar-wrapper">
+                        <div className="progressbar sixty">60%</div>
+                    </div>
                 </li>
                 <li>
-                    <div>GitHub</div>
+                    <span>GitHub</span>
+                    <div className="progressbar-wrapper">
+                        <div className="progressbar fifty">50%</div>
+                    </div>
                 </li>
                 <li>
-                    <div>Node.Js</div>
+                    <span>Node.Js</span>
+                    <div className="progressbar-wrapper">
+                        <div className="progressbar fifty">50%</div>
+                    </div>
                 </li>
             </ul>
 
