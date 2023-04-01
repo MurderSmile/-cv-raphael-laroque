@@ -18,7 +18,7 @@ function Cv() {
 
 
     return (
-        <div id="Cv">
+        <main id="Cv">
             <Presentation />
             <Profil />
             <Experiences />
@@ -28,7 +28,7 @@ function Cv() {
             <Interets />
             <Realisations />
             {project && project != null ? <Project /> : null}
-        </div>
+        </main>
     )
 }
 

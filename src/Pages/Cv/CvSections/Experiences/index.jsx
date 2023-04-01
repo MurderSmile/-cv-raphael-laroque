@@ -17,7 +17,6 @@ function Experiences() {
 
             </div>
 
-
             <ul id="Experiences__content">
                 <li>
                     <div>

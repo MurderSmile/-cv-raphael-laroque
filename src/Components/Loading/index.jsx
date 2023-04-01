@@ -8,7 +8,7 @@ function loading() {
             <div className="logo">
 
                 <div className="logo__face logo__face__front">
-                    <img src={SmilePicture} alt="Chargement en cours" />
+                    <img src={SmilePicture} alt="Veuillez patienter" />
                 </div>
 
                 <div className="logo__face logo__face__back">

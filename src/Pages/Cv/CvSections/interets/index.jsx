@@ -19,7 +19,7 @@ function Interets() {
 
             <ul id="Interets__content">
                 <li><span>Films/séries:</span>  Horreur, divers, etc...</li>
-                <li><span>Jeux Vidéos:</span>  Solo, Divers, Uchronie...</li>
+                <li><span>Jeux Vidéos:</span>  Solo, Uchronie, divers, etc...</li>
                 <li><span>Romans Graphiques:</span>  Thèmes divers...</li>
                 <li><span>Musiques:</span>  Pop, Rock...</li>
             </ul>

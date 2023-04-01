@@ -9,7 +9,7 @@ body {
     display: grid;
     grid-gap: 5px;
 
-    @media screen and (min-width: 680px) {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
@@ -25,7 +25,7 @@ body {
     padding: $padding*3;
     margin: $margin;
 
-    @media screen and (min-width: 680px) {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 4;
         grid-row: 1 / 2;
     }
@@ -35,7 +35,7 @@ body {
         flex-direction: column;
         align-items: center;
 
-        @media screen and (min-width: 680px) {
+        @media screen and (min-width: map-get($breakpoints, desktop)) {
             flex-direction: row-reverse;
         }
 
@@ -45,17 +45,16 @@ body {
             box-shadow: 5px 5px black;
             object-fit: cover;
 
-            @media screen and (max-width: 679px) {
+            @media screen and (max-width: map-get($breakpoints, mobile)) {
                 animation: image 5000ms both infinite alternate ease-in-out;
             }
 
-            @media screen and (min-width: 680px) {
+            @media screen and (min-width: map-get($breakpoints, desktop)) {
                 border-radius: 0% 100% 100% 0% / 50% 50% 50% 50%;
                 height: 299px;
                 width: 200px;
             }
         }
-
 
         &__description {
             list-style-type: none;
@@ -66,7 +65,7 @@ body {
             border-radius: 25px;
             box-shadow: rgba(146, 208, 80, 0.4) 5px 5px;
 
-            @media screen and (min-width: 680px) {
+            @media screen and (min-width: map-get($breakpoints, desktop)) {
                 border-radius: 25px 0px 0px 25px;
                 height: 285px;
             }
@@ -86,6 +85,10 @@ body {
                     border-radius: 25px;
                     justify-content: center;
                     align-items: center;
+                }
+
+                strong {
+                    font-weight: normal;
                 }
 
                 a {
@@ -126,28 +129,21 @@ body {
 
 #Profil {
 
-    @media screen and (max-width: 679px) {
-        @include section-mobile("Profil", rgb(0, 0, 0), 300px);
-    }
+    @include section-slide("Profil", rgb(0, 0, 0), 300px);
 
-    @media screen and (min-width: 680px) {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
-        @include section-desktop("Profil", rgb(0, 0, 0))
     }
-
 }
 
 #Experiences {
 
-    @media screen and (max-width: 679px) {
-        @include section-mobile("Experiences", #ff0000, 500px);
-    }
+    @include section-slide("Experiences", #ff0000, 500px);
 
-    @media screen and (min-width: 680px) {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 2 / 3;
         grid-row: 2 / 5;
-        @include section-desktop("Experiences", #ff0000)
     }
 
     ul {
@@ -159,27 +155,21 @@ body {
 
 #Formations {
 
-    @media screen and (max-width: 679px) {
-        @include section-mobile("Formations", #0eb0e2, 500px);
-    }
+    @include section-slide("Formations", #0eb0e2, 500px);
 
-    @media screen and (min-width: 680px) {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 3 / 4;
         grid-row: 2 / 4;
-        @include section-desktop("Formations", #0eb0e2)
     }
 }
 
 #Competences {
 
-    @media screen and (max-width: 679px) {
-        @include section-mobile("Competences", #9500a8, 300px);
-    }
+    @include section-slide("Competences", #9500a8, 300px);
 
-    @media screen and (min-width: 680px) {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
-        @include section-desktop("Competences", #9500a8)
     }
 
     span {
@@ -189,27 +179,21 @@ body {
 
 #SoftSkills {
 
-    @media screen and (max-width: 679px) {
-        @include section-mobile("SoftSkills", #f0fc01, 300px);
-    }
+    @include section-slide("SoftSkills", #f0fc01, 300px);
 
-    @media screen and (min-width: 680px) {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 2;
         grid-row: 4 / 5;
-        @include section-desktop("SoftSkills", #f0fc01)
     }
 }
 
 #Interets {
 
-    @media screen and (max-width: 679px) {
-        @include section-mobile("Interets", #eb43b0, 300px);
-    }
+    @include section-slide("Interets", #eb43b0, 300px);
 
-    @media screen and (min-width: 680px) {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 3 / 4;
         grid-row: 4 / 5;
-        @include section-desktop("Interets", #eb43b0)
     }
 
     li {
@@ -224,14 +208,11 @@ body {
 
 #Realisations {
 
-    @media screen and (max-width: 679px) {
-        @include section-mobile("Realisations", #cf7500, 300px);
-    }
+    @include section-slide("Realisations", #cf7500, 400px);
 
-    @media screen and (min-width: 680px) {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 4;
         grid-row: 5 / 6;
-        @include section-desktop("Realisations", #cf7500)
     }
 
     ul {

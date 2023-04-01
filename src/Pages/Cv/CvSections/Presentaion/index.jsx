@@ -19,25 +19,30 @@ function Presentation() {
                 <ul id="Presentation__profil__description">
                     <li><i className="fas fa-user"></i>Français</li>
                     <li><i className="fas fa-calendar-alt"></i>{getAge(new Date(1995, 10, 25))}ans</li>
-                    <li><i className="fas fa-home"></i>Bordeaux, France</li>
+                    <li><i className="fas fa-home"></i><strong>Bordeaux</strong>, <strong>France</strong></li>
                     <li><i className="fas fa-car-side"></i>Permis B</li>
                     <li><i className="fas fa-phone-square-alt"></i><a href="tel:+33628515565">
                         06 28 51 55 65
                     </a></li>
 
                     <li><i className="fas fa-envelope"></i><a href="mailto:raphael.laroque@yahoo.fr">
-                        raphael.laroque@yahoo.fr
+                        <strong>raphael</strong>.<strong>laroque</strong>@yahoo.fr
                     </a></li>
 
                     <li><i className="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/raphael-laroque/?originalSubdomain=fr">
-                        www.linkedin.com/in/raphael-laroque
+                        www.linkedin.com/in/<strong>raphael</strong>-<strong>laroque</strong>
                     </a></li>
 
                 </ul>
 
             </div>
 
-            <a href={Cv}><button><i className="fas fa-file-download"></i>Télécharger la Version Papier</button></a>
+            <a href={Cv} aria-label="Télécharger la Version PDF">
+                <button>
+                    <i className="fas fa-file-download"></i>
+                    Télécharger la Version PDF
+                </button>
+            </a>
 
         </section>
     )

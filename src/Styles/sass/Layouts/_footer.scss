@@ -7,17 +7,14 @@ footer {
     height: 100px;
     bottom: 0;
 
-    @media screen and (min-width: 680px) {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 4;
         grid-row: 7 / 8;
     }
 
-    a {
+    i {
         color: white;
-
-        i {
-            font-size: 50px;
-        }
+        font-size: 50px;
+        text-shadow: -2px -2px $colour-primary, 2px 2px $colour-secondary;
     }
-
 }
