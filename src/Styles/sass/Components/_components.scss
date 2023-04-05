@@ -28,3 +28,41 @@
         width: 200px;
     }
 }
+
+
+
+.btn {
+    position: relative;
+    background-color: #4068AE;
+    color: white;
+    cursor: pointer;
+    border-radius: $radius;
+    margin: 5px;
+    padding: $padding*2;
+    z-index: 0;
+    border: 3px solid black unset;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        opacity: 1;
+        z-index: -1;
+        border-radius: $radius;
+        padding: $padding;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    &:active {
+        animation: trans-button 100ms ease-in-out both;
+
+        &::after {
+            animation: opacity-button 100ms reverse ease-in-out both;
+        }
+
+    }
+}

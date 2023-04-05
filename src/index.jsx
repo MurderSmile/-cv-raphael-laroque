@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import './Styles/css/prefixed/index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -13,16 +15,25 @@ import Footer from "./Components/Footer";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <BrowserRouter>
 
-    <ProjectProvider>
+      <ProjectProvider>
 
-      {<Header />}
-      {<Loading />}
-      {<Cv />}
-      {<Footer />}
+        {<Header />}
 
-    </ProjectProvider>
+        {<Loading />}
 
+        <Routes>
+
+          <Route path='*' element={<Cv />} />
+
+        </Routes>
+
+        {<Footer />}
+
+      </ProjectProvider>
+
+    </BrowserRouter>
   </React.StrictMode>
 );
 

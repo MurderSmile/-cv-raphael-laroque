@@ -27,7 +27,7 @@ function Realisations() {
 
                     <li key={project.name}>
 
-                        <button onClick={() => { setProject(project) }}>
+                        <button className="btn" onClick={() => { setProject(project) }}>
                             {project.icon} {project.name}
                         </button>
 

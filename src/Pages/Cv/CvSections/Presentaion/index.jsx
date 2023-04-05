@@ -1,6 +1,8 @@
 import PhotoProfil from "../../../../Assets/PhotoProfil.JPG";
 import Cv from "../../../../Assets/CV_Laroque_Raphaël.pdf";
 
+import { Link } from "react-router-dom";
+
 function getAge(date) {
     let diff = Date.now() - date.getTime();
     let age = new Date(diff);
@@ -17,21 +19,47 @@ function Presentation() {
                 <img src={PhotoProfil} alt="Profil" />
 
                 <ul id="Presentation__profil__description">
-                    <li><i className="fas fa-user"></i>Français</li>
-                    <li><i className="fas fa-calendar-alt"></i>{getAge(new Date(1995, 10, 25))}ans</li>
-                    <li><i className="fas fa-home"></i><strong>Bordeaux</strong>, <strong>France</strong></li>
-                    <li><i className="fas fa-car-side"></i>Permis B</li>
-                    <li><i className="fas fa-phone-square-alt"></i><a href="tel:+33628515565">
-                        06 28 51 55 65
-                    </a></li>
 
-                    <li><i className="fas fa-envelope"></i><a href="mailto:raphael.laroque@yahoo.fr">
-                        <strong>raphael</strong>.<strong>laroque</strong>@yahoo.fr
-                    </a></li>
+                    <li>
+                        <i className="fas fa-user"></i>
+                        <span>Français</span>
+                    </li>
 
-                    <li><i className="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/raphael-laroque/?originalSubdomain=fr">
-                        www.linkedin.com/in/<strong>raphael</strong>-<strong>laroque</strong>
-                    </a></li>
+                    <li>
+                        <i className="fas fa-calendar-alt"></i>
+                        <span>{getAge(new Date(1995, 10, 25))}ans</span>
+                    </li>
+
+                    <li>
+                        <i className="fas fa-home"></i>
+                        <span><strong>Bordeaux</strong>, <strong>France</strong></span>
+                    </li>
+
+                    <li>
+                        <i className="fas fa-car-side"></i>
+                        <span>Permis B</span>
+                    </li>
+
+                    <li>
+                        <Link to="tel:+33628515565">
+                            <i className="fas fa-phone-square-alt"></i>
+                            <span>06 28 51 55 65</span>
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link to="mailto:raphael.laroque@yahoo.fr">
+                            <i className="fas fa-envelope"></i>
+                            <span><strong>raphael</strong>.<strong>laroque</strong>@yahoo.fr</span>
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link to="https://www.linkedin.com/in/raphael-laroque/?originalSubdomain=fr">
+                            <i className="fab fa-linkedin"></i>
+                            <span>www.linkedin.com/in/<strong>raphael</strong>-<strong>laroque</strong></span>
+                        </Link>
+                    </li>
 
                 </ul>
 

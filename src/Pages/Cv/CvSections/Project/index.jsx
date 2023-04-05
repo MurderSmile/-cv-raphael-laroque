@@ -2,6 +2,8 @@ import { useContext } from "react"
 
 import { ProjectContext } from "../../../../Utils/Context/index";
 
+import { Link } from "react-router-dom";
+
 function Project() {
 
     const { project, setProject } = useContext(ProjectContext)
@@ -13,7 +15,7 @@ function Project() {
 
                 <div className="Apercu">
 
-                    <button className="Apercu__exit" onClick={() => setProject(null)}>
+                    <button className="Apercu__exit" onClick={() => setProject(null)} aria-label="Quitter">
                         <i className="fas fa-times"></i>
                     </button>
 
@@ -24,7 +26,7 @@ function Project() {
                 {project.description}
 
                 <div className="acces">
-                    <button onClick={() => { window.location.href = project.github }}>GitHub</button>
+                    <Link to={project.github}><button className="btn">GitHub</button></Link>
                     {/* <button onClick={() => { window.location.href = project.network }}>Lien vers site</button>*/}
                 </div>
 
