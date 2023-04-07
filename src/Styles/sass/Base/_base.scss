@@ -320,7 +320,8 @@ body {
         .acces {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: center;
+            align-items: center;
             width: 150px;
             height: 150px;
         }
