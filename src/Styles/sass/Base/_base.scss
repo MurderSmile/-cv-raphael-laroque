@@ -151,7 +151,7 @@ body {
 
 #Profil {
 
-    @include section-slide("Profil", rgb(0, 0, 0), 300px);
+    @include section-slide("Profil", rgb(0, 0, 0), 400px);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 2;
@@ -187,7 +187,7 @@ body {
 
 #Competences {
 
-    @include section-slide("Competences", #9500a8, 300px);
+    @include section-slide("Competences", #9500a8, 400px);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 2;
@@ -201,7 +201,7 @@ body {
 
 #SoftSkills {
 
-    @include section-slide("SoftSkills", #f0fc01, 300px);
+    @include section-slide("SoftSkills", #f0fc01, 400px);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 2;
@@ -211,7 +211,7 @@ body {
 
 #Interets {
 
-    @include section-slide("Interets", #eb43b0, 300px);
+    @include section-slide("Interets", #eb43b0, 400px);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 3 / 4;

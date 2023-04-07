@@ -67,6 +67,8 @@
 
         @media screen and (max-width: map-get($breakpoints, mobile)) {
             overflow: scroll;
+            overflow-x: hidden;
+            scrollbar-color: $colour-secondary $colour-primary;
             max-height: $height*0.7;
         }
 
