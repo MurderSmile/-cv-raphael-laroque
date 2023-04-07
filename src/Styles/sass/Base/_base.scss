@@ -151,7 +151,7 @@ body {
 
 #Profil {
 
-    @include section-slide("Profil", rgb(0, 0, 0), 400px);
+    @include section-slide("Profil", rgb(0, 0, 0));
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 2;
@@ -161,7 +161,7 @@ body {
 
 #Experiences {
 
-    @include section-slide("Experiences", #ff0000, 500px);
+    @include section-slide("Experiences", #ff0000);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 2 / 3;
@@ -177,7 +177,7 @@ body {
 
 #Formations {
 
-    @include section-slide("Formations", #0eb0e2, 500px);
+    @include section-slide("Formations", #0eb0e2);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 3 / 4;
@@ -187,7 +187,7 @@ body {
 
 #Competences {
 
-    @include section-slide("Competences", #9500a8, 400px);
+    @include section-slide("Competences", #9500a8);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 2;
@@ -201,7 +201,7 @@ body {
 
 #SoftSkills {
 
-    @include section-slide("SoftSkills", #f0fc01, 400px);
+    @include section-slide("SoftSkills", #f0fc01);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 2;
@@ -211,7 +211,7 @@ body {
 
 #Interets {
 
-    @include section-slide("Interets", #eb43b0, 400px);
+    @include section-slide("Interets", #eb43b0);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 3 / 4;
@@ -230,7 +230,7 @@ body {
 
 #Realisations {
 
-    @include section-slide("Realisations", #cf7500, 400px);
+    @include section-slide("Realisations", #cf7500);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 4;

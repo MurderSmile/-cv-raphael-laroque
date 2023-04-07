@@ -1,4 +1,4 @@
-@mixin section-slide ($name, $colour, $height) {
+@mixin section-slide ($name, $colour) {
     background-color: $colour-primary;
     border-radius: $radius;
     padding: $padding;
@@ -69,7 +69,7 @@
             overflow: scroll;
             overflow-x: hidden;
             scrollbar-color: $colour-secondary $colour-primary;
-            max-height: $height*0.7;
+            max-height: 500px*0.7;
         }
 
         li {
@@ -80,7 +80,7 @@
     @media screen and (max-width: map-get($breakpoints, mobile)) {
 
         &.IsOpen {
-            max-height: $height;
+            max-height: 500px;
 
             ##{$name}__header {
                 box-shadow: 5px 5px 20px black;
