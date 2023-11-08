@@ -1,5 +1,5 @@
-import SmilePicture from "../../Assets/Q3TWy2Hl_400x400.jpg";
-import EmailPicture from "../../Assets/5d6347a976527a3e62ca8638bee35889.webp";
+import SmilePicture from "../../Assets/Images/Q3TWy2Hl_400x400.jpg";
+import EmailPicture from "../../Assets/Images/5d6347a976527a3e62ca8638bee35889.webp";
 
 function loading() {
     return (

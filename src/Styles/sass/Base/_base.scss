@@ -96,53 +96,63 @@ body {
                 a {
                     display: flex;
                     align-items: center;
+                    text-decoration: none;
+                    color: black;
                 }
             }
         }
     }
 
-    a {
-        color: black;
-        text-decoration: none;
+    .btnCv {
+        display: flex;
+        background-color: #595959;
+        box-shadow: 6px 6px 1px black inset, -3px -3px 1px black inset;
+        justify-content: center;
+        padding: 3px;
+        border-radius: 30px;
 
-        button {
-            display: flex;
-            position: relative;
-            padding: $padding*3;
-            background-color: $colour-primary;
-            align-items: center;
-            border-radius: 25px;
-            cursor: pointer;
-            z-index: 0;
+        a {
+            text-decoration: none;
 
-
-            &::after {
-                content: "";
-                position: absolute;
-                display: block;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                left: 0;
-                opacity: 1;
-                z-index: -1;
+            button {
+                display: flex;
+                position: relative;
+                padding: $padding*3;
+                background-color: $colour-primary;
+                align-items: center;
                 border-radius: 25px;
-                padding: $padding;
-                background-color: white;
-                box-shadow: 5px 5px 5px black;
-            }
+                cursor: pointer;
+                z-index: 0;
 
-            &:active {
-                animation: trans-button 100ms ease-in-out both;
 
                 &::after {
-                    animation: opacity-button 100ms reverse ease-in-out both;
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    opacity: 1;
+                    z-index: -1;
+                    border-radius: 25px;
+                    padding: $padding;
+                    background-color: white;
+                    box-shadow: 5px 5px 5px black;
                 }
-            }
 
-            i {
-                margin-right: 5px;
-                font-size: 1.4em;
+                &:active {
+                    animation: trans-button 100ms ease-in-out both;
+
+                    &::after {
+                        animation: opacity-button 100ms reverse ease-in-out both;
+                    }
+                }
+
+                i {
+                    margin-right: 5px;
+                    font-size: 1.4em;
+                }
             }
         }
     }

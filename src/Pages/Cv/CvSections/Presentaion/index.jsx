@@ -1,13 +1,39 @@
-import PhotoProfil from "../../../../Assets/PhotoProfil.JPG";
-import Cv from "../../../../Assets/CV_Laroque_Raphaël.pdf";
+import PhotoProfil from "../../../../Assets/Images/PhotoProfil.JPG";
+import Cv from "../../../../Assets/Images/CV_Laroque_Raphaël.pdf";
 
 import { Link } from "react-router-dom";
 
-function getAge(date) {
-    let diff = Date.now() - date.getTime();
-    let age = new Date(diff);
-    return Math.abs(age.getUTCFullYear() - 1970);
+import React, { useState, useEffect } from 'react';
+
+function Age() {
+    const [age, setAge] = useState(null);
+
+    useEffect(() => {
+        // Date de naissance (25/10/1995)
+        const birthDate = new Date('1995-10-25');
+
+        // Date actuelle
+        const currentDate = new Date();
+
+        // Calcul de l'âge en soustrayant l'année de naissance de l'année actuelle
+        const ageInYears = currentDate.getFullYear() - birthDate.getFullYear();
+
+        // Vérification si l'anniversaire est déjà passé cette année
+        if (
+            currentDate.getMonth() < birthDate.getMonth() ||
+            (currentDate.getMonth() === birthDate.getMonth() &&
+                currentDate.getDate() < birthDate.getDate())
+        ) {
+            setAge(ageInYears - 1); // Réduire l'âge de 1 si l'anniversaire n'a pas encore eu lieu cette année
+        } else {
+            setAge(ageInYears);
+        }
+    }, []);
+
+    return age
 }
+
+
 
 function Presentation() {
 
@@ -27,7 +53,8 @@ function Presentation() {
 
                     <li>
                         <i className="fas fa-calendar-alt"></i>
-                        <span>{getAge(new Date(1995, 10, 25))}ans</span>
+                        <span>{Age()} ans</span>
+
                     </li>
 
                     <li>
@@ -65,12 +92,14 @@ function Presentation() {
 
             </div>
 
-            <a href={Cv} aria-label="Télécharger la Version PDF">
-                <button>
-                    <i className="fas fa-file-download"></i>
-                    Télécharger la Version PDF
-                </button>
-            </a>
+            <div className="btnCv">
+                <a href={Cv} aria-label="Télécharger la Version PDF">
+                    <button>
+                        <i className="fas fa-file-download"></i>
+                        Télécharger la Version PDF
+                    </button>
+                </a>
+            </div>
 
         </section>
     )

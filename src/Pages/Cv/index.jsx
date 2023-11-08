@@ -16,7 +16,6 @@ import { ProjectContext } from "../../Utils/Context";
 function Cv() {
     const { project } = useContext(ProjectContext)
 
-
     return (
         <main id="Cv">
             <Presentation />

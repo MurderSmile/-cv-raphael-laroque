@@ -20,11 +20,11 @@ function SoftSkills() {
 
             <ul id="SoftSkills__content">
                 <li>Esprit de coopération</li>
-                <li>Consciencieux</li>
+                <li>Rigoureux</li>
                 <li>Sens du détail</li>
                 <li>Empathique</li>
                 <li>Persévérant</li>
-                <li>Calme</li>
+                <li>Curieux</li>
             </ul>
 
         </section>

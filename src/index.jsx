@@ -1,38 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import './Styles/css/prefixed/index.css';
-import reportWebVitals from './reportWebVitals';
+import "./Styles/css/prefixed/index.css";
+import reportWebVitals from "./reportWebVitals";
 
 import { ProjectProvider } from "./Utils/Context/index";
 
 import Header from "./Components/Header";
 import Loading from "./Components/Loading";
-import Cv from './Pages/Cv/index';
+import Cv from "./Pages/Cv/index";
 import Footer from "./Components/Footer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-
       <ProjectProvider>
+        <Header />
 
-        {<Header />}
-
-        {<Loading />}
+        <Loading />
 
         <Routes>
-
-          <Route path='*' element={<Cv />} />
-
+          <Route path="*" element={<Cv />} />
         </Routes>
 
-        {<Footer />}
-
+        <Footer />
       </ProjectProvider>
-
     </BrowserRouter>
   </React.StrictMode>
 );

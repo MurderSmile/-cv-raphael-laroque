@@ -1,5 +1,5 @@
 @mixin section-slide ($name, $colour) {
-    background-color: $colour-primary;
+    background-color: map-get($colors, two);
     border-radius: $radius;
     padding: $padding;
     margin: $margin;

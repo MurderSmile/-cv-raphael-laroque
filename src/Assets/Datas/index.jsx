@@ -1,8 +1,8 @@
-import OhmyfoodPicture from "../Assets/Ohmyfood.png";
-import KanapPicture from "../Assets/Kanap.png";
-import PantherePicture from "../Assets/Panthere.png";
-import PiiquantePicture from "../Assets/Piiquante.png";
-import GroupomaniaPicture from "../Assets/iconCouleurPrimary.png";
+import OhmyfoodPicture from "../Images/Ohmyfood.png";
+import KanapPicture from "../Images/Kanap.png";
+import PantherePicture from "../Images/Panthere.png";
+import PiiquantePicture from "../Images/Piiquante.png";
+import GroupomaniaPicture from "../Images/iconCouleurPrimary.png";
 
 export const projects = [
     {
