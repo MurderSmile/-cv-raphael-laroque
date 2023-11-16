@@ -22,8 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass --watch ./src/Styles/sass/main.scss:./src/Styles/css/index.css --style compressed",
-    "prefix": "postcss --watch ./src/Styles/css/index.css --use autoprefixer -d ./src/Styles/css/prefixed/"
+    "build:css": "sass src/styles/sass/main.scss:src/styles/css/index.css --style compressed --watch && autoprefixer src/styles/css/index.css --browsers 'last 10 versions'"
   },
   "eslintConfig": {
     "extends": [

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import "./Styles/css/prefixed/index.css";
+import "./Styles/css/index.css";
 import reportWebVitals from "./reportWebVitals";
 
 import { ProjectProvider } from "./Utils/Context/index";

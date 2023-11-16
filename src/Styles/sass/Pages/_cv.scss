@@ -1,0 +1,289 @@
+#Cv {
+    display: grid;
+    grid-gap: 5px;
+
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+#Presentation {
+    position: relative;
+    // background-color: #4068AE;
+
+    border-radius: 0 0 $radius $radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+    }
+
+    video {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        z-index: -1;
+    }
+
+    &__profil {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (min-width: map-get($breakpoints, desktop)) {
+            flex-direction: row-reverse;
+        }
+
+        img {
+            width: 150px;
+            border: 7px double $colour-secondary;
+            object-fit: cover;
+
+            @media screen and (max-width: map-get($breakpoints, mobile)) {
+                // animation: image 5000ms both infinite alternate ease-in-out;
+            }
+
+            @media screen and (min-width: map-get($breakpoints, desktop)) {
+                border-radius: 0% 100% 100% 0% / 50% 50% 50% 50%;
+                height: 299px;
+                width: 200px;
+            }
+        }
+
+        &__description {
+            list-style-type: none;
+            justify-self: flex-start;
+            background-color: $colour-primary;
+            border: 5px double $colour-secondary;
+            padding: 0.5em;
+            border-radius: 4em;
+
+            @media screen and (min-width: map-get($breakpoints, desktop)) {
+                border-radius: 25px 0px 0px 25px;
+                height: 285px;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                color: black;
+
+                i {
+                    display: flex;
+                    margin: 5px;
+                    color: white;
+                    background-color: black;
+                    height: 30px;
+                    min-width: 30px;
+                    border-radius: 25px;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: $margin;
+                }
+
+
+                strong {
+                    font-weight: normal;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+
+
+}
+
+#Profil {
+
+    @include section-slide("Profil", rgb(0, 0, 0));
+
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+}
+
+#Experiences {
+
+    @include section-slide("Experiences", #ff0000);
+
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 5;
+    }
+
+    ul {
+        ul {
+            font-size: 1.1em;
+        }
+    }
+}
+
+#Formations {
+
+    @include section-slide("Formations", #0eb0e2);
+
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+    }
+}
+
+#Competences {
+
+    @include section-slide("Competences", #9500a8);
+
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    span {
+        margin-right: 5px;
+    }
+}
+
+#SoftSkills {
+
+    @include section-slide("SoftSkills", #f0fc01);
+
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+}
+
+#Interets {
+
+    @include section-slide("Interets", #eb43b0);
+
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        grid-column: 3 / 4;
+        grid-row: 4 / 5;
+    }
+
+    li {
+        font-style: italic;
+
+        span {
+            font-style: normal;
+            font-weight: bold;
+        }
+    }
+}
+
+#Realisations {
+
+    @include section-slide("Realisations", #cf7500);
+
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        grid-column: 1 / 4;
+        grid-row: 5 / 6;
+    }
+
+    ul {
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+    }
+}
+
+.Project {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .Descriptif {
+        display: flex;
+        position: fixed;
+        justify-self: center;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        color: black;
+        width: 90%;
+        max-height: 500px;
+        padding: $padding;
+
+        img {
+            max-height: 150px;
+            max-width: 150px;
+        }
+
+        .Apercu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: $margin*2;
+
+            h2 {
+                box-shadow: 5px 5px 5px black;
+                padding: $padding;
+                border-radius: $radius;
+            }
+
+            &__exit {
+                position: absolute;
+                background-color: #ff0000;
+                color: white;
+                top: 0;
+                right: 0;
+                font-size: 1.5em;
+                padding: 4px;
+            }
+
+            &__description {
+                display: flex;
+                flex-direction: column;
+                background-color: $colour-primary;
+                border: 5px solid black;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                scrollbar-color: $colour-secondary $colour-primary;
+                max-height: 400px;
+                padding: $padding;
+
+                p {
+                    text-align: center;
+                    font-size: 1.2em;
+                }
+            }
+        }
+
+        .acces {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
