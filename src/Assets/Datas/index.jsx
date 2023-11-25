@@ -1,28 +1,32 @@
-import OhmyfoodPicture from "../Images/Ohmyfood.png";
-import KanapPicture from "../Images/Kanap.png";
-import PantherePicture from "../Images/Panthere.png";
-import PiiquantePicture from "../Images/Piiquante.png";
-import GroupomaniaPicture from "../Images/iconCouleurPrimary.png";
+import VOhmyfood from "../Videos/Ohmyfood.mp4";
+import VKanap from "../Videos/Kanap.mp4";
+import VPiiquante from "../Videos/Piiquante.mp4";
+import VPanthere from "../Videos/Panthere.mp4";
+import VGroupomania from "../Videos/Groupomania.mp4";
+
+const importAll = (repertoire) => {
+    return repertoire.keys().map(repertoire);
+};
 
 export const projects = [
     {
         name: 'Ohmyfood',
-        image: OhmyfoodPicture,
+        images: importAll(require.context('../../Assets/Images/Ohmyfood', false, /\.(png|jpe?g|svg)$/)),
+        video: VOhmyfood,
         icon: <i className="fas fa-utensils"></i>,
-        description:
-            <div className="Apercu__description">
-                <p>
-                    Le client est une startup sur le marché de la restauration du nom de Ohmyfood.
-                    La commande est une maquette intéractive mobile-first, composé d'un index listant les restaurants participants, et de 4 pages restaurant/menu.
-                </p>
-            </div>,
+        description: <div className="Apercu__description">
+            <p>
+                Le client est une startup sur le marché de la restauration du nom de Ohmyfood.<br />
+                La commande est une maquette intéractive mobile-first, composé d'un index listant les restaurants participants, et de 4 pages restaurant/menu.
+            </p>
+        </div>,
         github: 'https://github.com/MurderSmile/OC_Ohmyfood.git',
-        //network:
     },
 
     {
         name: 'Agence la Panthère',
-        image: PantherePicture,
+        images: importAll(require.context('../../Assets/Images/Panthere', false, /\.(png|jpe?g|svg)$/)),
+        video: VPanthere,
         icon: <i className="fas fa-cat"></i>,
         description:
             <div className="Apercu__description">
@@ -44,12 +48,12 @@ export const projects = [
                 </ol>
             </div>,
         github: 'https://github.com/MurderSmile/OC_Agence_la_Panthere.git',
-        //network:
     },
 
     {
         name: 'Kanap',
-        image: KanapPicture,
+        images: importAll(require.context('../../Assets/Images/Kanap', false, /\.(png|jpe?g|svg)$/)),
+        video: VKanap,
         icon: <i className="fas fa-couch"></i>,
         description:
             <div className="Apercu__description">
@@ -60,12 +64,12 @@ export const projects = [
                 </p>
             </div>,
         github: 'https://github.com/MurderSmile/OC_Kanap.git',
-        //network:
     },
 
     {
         name: 'Piiquante',
-        image: PiiquantePicture,
+        images: importAll(require.context('../../Assets/Images/Piiquante', false, /\.(png|jpe?g|svg)$/)),
+        video: VPiiquante,
         icon: <i className="fas fa-pepper-hot"></i>,
         description:
             <div className="Apercu__description">
@@ -76,13 +80,12 @@ export const projects = [
                 </p>
             </div>,
         github: 'https://github.com/MurderSmile/OC_Piiquante.git',
-        //network:
-
     },
 
     {
         name: 'Groupomania',
-        image: GroupomaniaPicture,
+        images: importAll(require.context('../../Assets/Images/Groupomania', false, /\.(png|jpe?g|svg)$/)),
+        video: VGroupomania,
         icon: <i className="fas fa-globe"></i>,
         description:
             <div className="Apercu__description">
@@ -98,6 +101,5 @@ export const projects = [
                 </ul>
             </div>,
         github: 'https://github.com/MurderSmile/OC_Groupomania.git',
-        //network:
     },
 ]

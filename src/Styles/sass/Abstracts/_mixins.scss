@@ -1,18 +1,40 @@
-@mixin section-slide ($name, $colour) {
-    background-color: map-get($colors, two);
-    border-radius: $radius;
-    padding: $padding;
-    margin: $margin;
+@mixin section-slide ($name, $color, $image) {
+    position: relative;
+    border-radius: 1em;
+    padding: 0.3em;
+    margin: 0.3em;
+    // border: 0.2em solid $color;
+    box-shadow: 0.3em 0.3em $color inset;
+
+    background-color: rgba(227, 232, 235, 0);
+
+
+    &::after {
+        position: absolute;
+        content: "";
+        background-image: url($image);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 1em;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
 
     @media screen and (max-width: map-get($breakpoints, mobile)) {
         overflow: hidden;
         max-height: 60px;
         transition: max-height 500ms ease-in-out;
+        background-color: rgba(227, 232, 235, 1);
     }
 
     &__header {
-        background-color: $colour-primary;
-        border-radius: $radius;
+        // background-color: #e3e8eb;
+        background-color: rgba(227, 232, 235, 0.9);
+        border-radius: 1em;
         display: flex;
         height: 60px;
 
@@ -24,18 +46,18 @@
         &__title {
             display: flex;
             align-items: center;
-            padding: 10px;
+            padding: 0.3em;
 
             i {
                 display: flex;
-                font-size: 20px;
-                background-color: white;
                 align-items: center;
                 justify-content: center;
+                background-color: white;
+                font-size: 20px;
                 width: 30px;
                 height: 30px;
-                border-radius: 25px;
-                border: 5px solid $colour;
+                border-radius: 1em;
+                border: 5px solid $color;
             }
 
             h3 {
@@ -60,10 +82,13 @@
     }
 
     &__content {
-        background-color: #D1D3D4;
-        padding: $padding*4 $padding*4;
-        border-radius: $radius;
-        box-shadow: $colour 2px 2px 5px 0px inset, $colour-primary 2px 2px 5px 0px inset;
+        background-color: rgba(227, 232, 235, 0.9);
+        padding: 2em;
+        border-radius: 1em;
+
+        li {
+            margin: 5px;
+        }
 
         @media screen and (max-width: map-get($breakpoints, mobile)) {
             overflow: scroll;
@@ -72,9 +97,6 @@
             max-height: 500px*0.7;
         }
 
-        li {
-            margin: 5px auto;
-        }
     }
 
     @media screen and (max-width: map-get($breakpoints, mobile)) {

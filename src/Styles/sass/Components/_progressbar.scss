@@ -20,11 +20,10 @@
         width: 75%;
     }
 
-
     &-wrapper {
-        background-color: $colour-primary;
+        // background-color: $colour-primary;
         border-radius: 15px;
-        box-shadow: 1Px 1px 3px #9500a8 inset, -1Px -1px 3px #9500a8 inset;
+        box-shadow: 1Px 1px 1px black inset, -1Px -1px 1px black inset;
         width: 200px;
     }
 }

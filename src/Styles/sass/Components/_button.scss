@@ -1,7 +1,6 @@
-.btn {
+.btnRealisation {
     position: relative;
-    background-color: #4068AE;
-    color: white;
+    background-color: map-get($colors , realisations);
     cursor: pointer;
     border-radius: $radius;
     margin: 5px;

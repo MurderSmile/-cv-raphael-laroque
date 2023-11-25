@@ -6,6 +6,7 @@ import { projects } from "../../../../Assets/Datas";
 function Realisations() {
 
     const { setProject } = useContext(ProjectContext)
+
     const [isOpen, setIsOpen] = useState(false)
 
     return (
@@ -22,12 +23,13 @@ function Realisations() {
 
             </div>
 
+
             <ul id="Realisations__content">
                 {projects.map((project) =>
 
                     <li key={project.name}>
 
-                        <button className="btn" onClick={() => { setProject(project) }}>
+                        <button className="btnRealisation" onClick={() => { setProject(project) }}>
                             {project.icon} {project.name}
                         </button>
 

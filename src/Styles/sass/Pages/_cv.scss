@@ -11,7 +11,7 @@
     position: relative;
     // background-color: #4068AE;
 
-    border-radius: 0 0 $radius $radius;
+    // border-radius: 0 0 $radius $radius;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,6 +32,7 @@
         // display: flex;
         // align-items: center;
         // justify-content: center;
+
         z-index: -1;
     }
 
@@ -40,23 +41,26 @@
         flex-direction: column;
         align-items: center;
 
+        height: 18em;
+
+
+
         @media screen and (min-width: map-get($breakpoints, desktop)) {
             flex-direction: row-reverse;
+            margin: 2em;
         }
 
         img {
-            width: 150px;
-            border: 7px double $colour-secondary;
+            // width: 150px;
+            border: 5px double $colour-secondary;
             object-fit: cover;
-
-            @media screen and (max-width: map-get($breakpoints, mobile)) {
-                // animation: image 5000ms both infinite alternate ease-in-out;
-            }
+            height: 100%;
 
             @media screen and (min-width: map-get($breakpoints, desktop)) {
                 border-radius: 0% 100% 100% 0% / 50% 50% 50% 50%;
-                height: 299px;
-                width: 200px;
+                // height: 299px;
+                // width: 200px;
+
             }
         }
 
@@ -65,12 +69,18 @@
             justify-self: flex-start;
             background-color: $colour-primary;
             border: 5px double $colour-secondary;
-            padding: 0.5em;
+            // padding: 0.5em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             border-radius: 4em;
+            padding: 0 0.2em;
 
             @media screen and (min-width: map-get($breakpoints, desktop)) {
                 border-radius: 25px 0px 0px 25px;
-                height: 285px;
+                // height: 285px;
+                width: 100%;
+                height: 100%;
             }
 
             li {
@@ -111,7 +121,7 @@
 
 #Profil {
 
-    @include section-slide("Profil", rgb(0, 0, 0));
+    @include section-slide("Profil", map-get($colors, profil), $imageProfil);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 2;
@@ -121,7 +131,7 @@
 
 #Experiences {
 
-    @include section-slide("Experiences", #ff0000);
+    @include section-slide("Experiences", map-get($colors, experiences), $imageExProf);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 2 / 3;
@@ -137,7 +147,7 @@
 
 #Formations {
 
-    @include section-slide("Formations", #0eb0e2);
+    @include section-slide("Formations", map-get($colors, formations), $imageForms);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 3 / 4;
@@ -147,7 +157,7 @@
 
 #Competences {
 
-    @include section-slide("Competences", #9500a8);
+    @include section-slide("Competences", map-get($colors, competences), $imageCompts);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 2;
@@ -161,7 +171,7 @@
 
 #SoftSkills {
 
-    @include section-slide("SoftSkills", #f0fc01);
+    @include section-slide("SoftSkills", map-get($colors, softskills), $imageSoftSkills);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 2;
@@ -171,7 +181,7 @@
 
 #Interets {
 
-    @include section-slide("Interets", #eb43b0);
+    @include section-slide("Interets", map-get($colors, interets), $imageInterets);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 3 / 4;
@@ -190,7 +200,7 @@
 
 #Realisations {
 
-    @include section-slide("Realisations", #cf7500);
+    @include section-slide("Realisations", map-get($colors, realisations), $imageRealis);
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 4;
@@ -227,15 +237,11 @@
         justify-content: space-between;
         align-items: center;
         background-color: white;
+        border: 5px solid map-get($colors, realisations);
         color: black;
         width: 90%;
         max-height: 500px;
         padding: $padding;
-
-        img {
-            max-height: 150px;
-            max-width: 150px;
-        }
 
         .Apercu {
             display: flex;
@@ -259,14 +265,48 @@
                 padding: 4px;
             }
 
+            // .panorama {
+            //     width: 100%;
+            //     height: 200px;
+            //     position: relative;
+            //     display: flex;
+            //     flex-direction: column;
+            //     align-items: center;
+
+            //     img {
+            //         width: 100%;
+            //         height: 100%;
+            //         object-fit: cover;
+            //     }
+
+            //     .directions {
+            //         display: flex;
+            //         justify-content: space-between;
+            //         width: 100%;
+
+            //         i {
+            //             background-color: map-get($colors, realisations);
+            //             padding: 0.3em 1em;
+            //             border-radius: 2em;
+            //             border: solid 3px black;
+            //             margin: 5px;
+            //         }
+            //     }
+            // }
+
+            video {
+                height: 200px;
+                width: 110%;
+            }
+
             &__description {
                 display: flex;
                 flex-direction: column;
-                background-color: $colour-primary;
+                background-color: map-get($colors, realisations);
                 border: 5px solid black;
                 overflow-y: scroll;
                 overflow-x: hidden;
-                scrollbar-color: $colour-secondary $colour-primary;
+                scrollbar-color: black map-get($colors, realisations);
                 max-height: 400px;
                 padding: $padding;
 
