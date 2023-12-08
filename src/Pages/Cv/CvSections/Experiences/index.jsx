@@ -65,6 +65,8 @@ function Experiences() {
                 </li>
             </ul>
 
+            {/* <div className="reflet-de-verre"></div> */}
+
         </section>
     )
 }

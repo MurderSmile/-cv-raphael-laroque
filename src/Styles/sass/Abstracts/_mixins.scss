@@ -3,13 +3,9 @@
     border-radius: 1em;
     padding: 0.3em;
     margin: 0.3em;
-    // border: 0.2em solid $color;
-    box-shadow: 0.3em 0.3em $color inset;
+    box-shadow: 0.3em 0.3em $color inset, 0.3em 0.3em black;
 
-    background-color: rgba(227, 232, 235, 0);
-
-
-    &::after {
+    &::before {
         position: absolute;
         content: "";
         background-image: url($image);
@@ -27,12 +23,24 @@
     @media screen and (max-width: map-get($breakpoints, mobile)) {
         overflow: hidden;
         max-height: 60px;
-        transition: max-height 500ms ease-in-out;
         background-color: rgba(227, 232, 235, 1);
+        transition: all 400ms ease-in-out;
+
+        &.IsOpen {
+            max-height: 500px;
+            background-color: rgba(227, 232, 235, 0);
+
+            ##{$name}__header {
+
+                .fa-arrow-circle-up {
+                    transform: rotate(0.5turn);
+                }
+
+            }
+        }
     }
 
     &__header {
-        // background-color: #e3e8eb;
         background-color: rgba(227, 232, 235, 0.9);
         border-radius: 1em;
         display: flex;
@@ -93,25 +101,10 @@
         @media screen and (max-width: map-get($breakpoints, mobile)) {
             overflow: scroll;
             overflow-x: hidden;
-            scrollbar-color: $colour-secondary $colour-primary;
-            max-height: 500px*0.7;
+            scrollbar-color: map-get($colors, realisations) black;
+            max-height: 300px;
         }
 
     }
 
-    @media screen and (max-width: map-get($breakpoints, mobile)) {
-
-        &.IsOpen {
-            max-height: 500px;
-
-            ##{$name}__header {
-                box-shadow: 5px 5px 20px black;
-
-                .fa-arrow-circle-up {
-                    transform: rotate(0.5turn);
-                }
-
-            }
-        }
-    }
 }

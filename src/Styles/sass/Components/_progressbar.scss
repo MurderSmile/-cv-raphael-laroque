@@ -6,24 +6,59 @@
     font-size: 20px;
     border-radius: 15px;
 
-    &.fifty {
-        width: 55%;
-    }
-
-
-    &.sixty {
-        width: 65%;
-    }
-
-
-    &.seventy {
-        width: 75%;
-    }
-
     &-wrapper {
-        // background-color: $colour-primary;
         border-radius: 15px;
         box-shadow: 1Px 1px 1px black inset, -1Px -1px 1px black inset;
         width: 200px;
+    }
+
+    &.fifty {
+        @media screen and (min-width: map-get($breakpoints, desktop)) {
+            animation: change-width-fifty 1000ms ease-in both 1500ms;
+        }
+
+        @media screen and (max-width: map-get($breakpoints, mobile)) {
+            width: 5%;
+            transition: width 400ms ease-in-out;
+        }
+    }
+
+    &.sixty {
+        @media screen and (min-width: map-get($breakpoints, desktop)) {
+            animation: change-width-sixty 1000ms ease-in both 1500ms;
+        }
+
+        @media screen and (max-width: map-get($breakpoints, mobile)) {
+            width: 5%;
+            transition: width 400ms ease-in-out;
+        }
+    }
+
+    &.seventy {
+        @media screen and (min-width: map-get($breakpoints, desktop)) {
+            animation: change-width-seventy 1000ms ease-in both 1500ms;
+        }
+
+        @media screen and (max-width: map-get($breakpoints, mobile)) {
+            width: 5%;
+            transition: width 400ms ease-in-out;
+        }
+    }
+
+}
+
+.IsOpen {
+    .progressbar {
+        &.fifty {
+            width: 55%;
+        }
+
+        &.sixty {
+            width: 65%;
+        }
+
+        &.seventy {
+            width: 75%;
+        }
     }
 }

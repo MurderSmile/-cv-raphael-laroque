@@ -14,7 +14,7 @@ export const projects = [
         images: importAll(require.context('../../Assets/Images/Ohmyfood', false, /\.(png|jpe?g|svg)$/)),
         video: VOhmyfood,
         icon: <i className="fas fa-utensils"></i>,
-        description: <div className="Apercu__description">
+        description: <div className="Apercu__details__description">
             <p>
                 Le client est une startup sur le marché de la restauration du nom de Ohmyfood.<br />
                 La commande est une maquette intéractive mobile-first, composé d'un index listant les restaurants participants, et de 4 pages restaurant/menu.
@@ -29,7 +29,7 @@ export const projects = [
         video: VPanthere,
         icon: <i className="fas fa-cat"></i>,
         description:
-            <div className="Apercu__description">
+            <div className="Apercu__details__description">
                 <p>
                     Agence la panthère est une agence de Web design qui souhaite obtenir un meilleur référencement SEO.
                     Pour cela il était nécessaire de procéder à plusieurs modifications sur les 2 pages du site:
@@ -56,7 +56,7 @@ export const projects = [
         video: VKanap,
         icon: <i className="fas fa-couch"></i>,
         description:
-            <div className="Apercu__description">
+            <div className="Apercu__details__description">
                 <p>
                     Kanap, une entreprise de vente de canapés en boutique, souhaite avoir une plateforme de commerce en plus de sa boutique physique pour vendre ses produits sur Internet.
                     La partie HTML, CSS et Backend ont déjà été conçues.
@@ -72,7 +72,7 @@ export const projects = [
         video: VPiiquante,
         icon: <i className="fas fa-pepper-hot"></i>,
         description:
-            <div className="Apercu__description">
+            <div className="Apercu__details__description">
                 <p>
                     Piiquante une marque de condiments à base de piment, veut développer une application web de critique des sauces piquantes appelée « Hot Takes » .
                     La partie frontend a déjà été conçue.
@@ -88,7 +88,7 @@ export const projects = [
         video: VGroupomania,
         icon: <i className="fas fa-globe"></i>,
         description:
-            <div className="Apercu__description">
+            <div className="Apercu__details__description">
                 <p>
                     Groupomania, un groupe spécialisé dans la grande distribution, voudrait mettre en place un réseau social d'entreprise, pour facilité la communication et amélioré le relationnel entres les employés.
                 </p>

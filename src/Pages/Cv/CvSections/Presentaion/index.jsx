@@ -1,6 +1,5 @@
 import PhotoProfil from "../../../../Assets/Images/PhotoProfil.png";
 import Cv from "../../../../Assets/Images/CV_Laroque_Raphaël.pdf";
-import video from "../../../../Assets/Videos/courbures.mp4";
 
 import { Link } from "react-router-dom";
 
@@ -40,8 +39,6 @@ function Presentation() {
 
     return (
         <section id="Presentation">
-
-            <video src={video} autoPlay loop muted></video>
 
             <div id="Presentation__profil">
 
