@@ -2,11 +2,17 @@
     position: relative;
     background-color: map-get($colors , realisations);
     cursor: pointer;
-    border-radius: $radius;
+    border-radius: 25px;
     margin: 5px;
-    padding: $padding*3;
+    padding: 15px;
     z-index: 0;
-    border: 3px solid black unset;
+
+    &.gitHub {
+        margin: 10px;
+        width: 300px;
+        font-size: larger;
+        font-weight: bold;
+    }
 
     &::after {
         content: "";
@@ -18,8 +24,9 @@
         left: 0;
         opacity: 1;
         z-index: -1;
-        border-radius: $radius;
+        border-radius: 25px;
         box-shadow: 5px 5px 5px black;
+
     }
 
     &:active {
@@ -34,11 +41,12 @@
 
 .btnCv {
     display: flex;
-    background-color: #595959;
-    box-shadow: 6px 6px 1px black inset, -3px -3px 1px black inset;
+    // background-color: #595959;
+    box-shadow: 6px 6px 1px black inset, -6px -6px 1px black inset;
     justify-content: center;
     padding: 3px;
     border-radius: 30px;
+    border: 2px solid rgba(227, 232, 235, 0.9);
 
     a {
         text-decoration: none;
@@ -46,13 +54,14 @@
         button {
             display: flex;
             position: relative;
-            padding: $padding*3;
-            background-color: #e1b582;
+            padding: 15px 40px;
+            background-color: rgba(225, 181, 130, 0.7);
             align-items: center;
             border-radius: 25px;
             cursor: pointer;
             z-index: 0;
-
+            translate: -3px -3px;
+            font-weight: bold;
 
             &::after {
                 content: "";
@@ -62,25 +71,26 @@
                 bottom: 0;
                 right: 0;
                 left: 0;
-                opacity: 1;
+                opacity: 0;
                 z-index: -1;
-                border-radius: 25px;
-                padding: $padding;
-                background-color: white;
-                box-shadow: 5px 5px 5px black;
+                border-radius: 21px;
+                background-color: #CFC146;
+                // box-shadow: 5px 5px 5px black;
             }
 
             &:active {
                 animation: trans-button 100ms ease-in-out both;
 
                 &::after {
-                    animation: opacity-button 100ms reverse ease-in-out both;
+                    animation: opacity-button 100ms ease-in-out both;
                 }
             }
 
             i {
                 margin-right: 5px;
-                font-size: 1.4em;
+                font-size: 1.8em;
+                color: black;
+                background-color: white;
             }
         }
     }

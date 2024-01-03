@@ -2,9 +2,9 @@
     position: relative;
     display: grid;
     grid-gap: 5px;
+    margin: 10px;
 
     &::before {
-        background-color: rgba(227, 232, 235, 0.2);
         position: absolute;
         content: "";
         top: 0;
@@ -20,30 +20,42 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    #videoFont {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        z-index: -2;
-    }
-
     #Presentation {
+        justify-self: center;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0.5em;
+        // padding: 50px;
+        max-width: calc(100% - 100px);
         margin-bottom: 10px;
-        // background: linear-gradient(rgba(89, 89, 89, 1), rgba(89, 89, 89, 0.4) 66%, transparent);
 
         @media screen and (min-width: map-get($breakpoints, desktop)) {
             grid-column: 1 / 4;
             grid-row: 1 / 2;
+
+            background-color: rgba(149, 0, 168, 0.5);
+            box-shadow: -5px -5px 5px rgba(149, 0, 168, 0.6);
+            border-radius: 30% 70% 47% 53% / 59% 26% 74% 41%;
+            width: 70%;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            border-radius: 1em;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+
+
+            @media screen and (min-width: map-get($breakpoints, desktop)) {
+                background-color: rgba(223, 205, 42, 0.7);
+                box-shadow: 5px 5px 5px rgba(223, 205, 42, 0.8);
+                border-radius: 84% 16% 70% 30% / 45% 67% 33% 55%;
+            }
         }
 
         &__profil {
@@ -58,7 +70,7 @@
             }
 
             img {
-                border: 5px double #9500a8;
+                border: 5px double rgba(227, 232, 235, 0.9);
                 border-radius: 100% 100% 0% 0% / 50% 50% 50% 50%;
                 object-fit: cover;
                 height: 100%;
@@ -75,23 +87,24 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-
                 list-style-type: none;
                 justify-self: flex-start;
-                background-color: #e1b582;
-                border: 5px double #9500a8;
-
+                background-color: rgba(225, 181, 130, 0.7);
+                border: 3px solid rgba(227, 232, 235, 0.9);
                 border-radius: 0px 0px 25px 25px;
-                padding: 0 0.2em;
+                width: calc(100% - 9px);
+                padding: 2px;
 
                 @media screen and (max-width: map-get($breakpoints, mobile)) {
+                    border-top: none;
                     margin-top: auto;
                 }
 
                 @media screen and (min-width: map-get($breakpoints, desktop)) {
+                    border-right: none;
                     border-radius: 25px 0px 0px 25px;
-                    width: 100%;
                     height: 100%;
+                    width: 100%;
                 }
 
                 li {
@@ -246,15 +259,15 @@
             display: flex;
             position: fixed;
             justify-self: center;
-            flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            flex-direction: column;
             background-color: white;
             border: 5px solid map-get($colors, realisations);
+            border-radius: 25px 0 25px 25px;
             color: black;
             width: 90%;
-            max-height: 500px;
-            padding: $padding;
+            max-height: 600px;
 
             &__exit {
                 position: absolute;
@@ -262,57 +275,114 @@
                 color: white;
                 top: 0;
                 right: 0;
-                font-size: 1.5em;
-                padding: 4px;
+                font-size: 1.6em;
+                padding: 5px;
             }
 
             h2 {
                 box-shadow: 5px 5px 5px black;
-                padding: $padding;
-                border-radius: $radius;
+                padding: 5px;
+                border-radius: 25px;
             }
 
             .Apercu {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
-                background-color: #9500a8;
+
+                @media screen and (min-width: map-get($breakpoints, desktop)) {
+                    flex-direction: row;
+                    align-items: normal;
+                }
 
                 video {
-                    height: 100%;
-                    width: 60%;
+                    border: 5px solid map-get($colors, realisations);
+                    width: 100%;
+                    z-index: 1;
+
+                    @media screen and (min-width: map-get($breakpoints, desktop)) {
+                        margin-left: 15px;
+                        height: 100%;
+                        width: 55%;
+                        border-radius: 10px 0px 10px 10px;
+                        box-shadow: 6px 6px 7px black;
+                    }
                 }
 
                 &__details {
+                    display: flex;
+
+                    @media screen and (min-width: map-get($breakpoints, desktop)) {
+                        flex-direction: column;
+                        width: 45%;
+                    }
 
                     &__description {
-                        height: 200px;
-                        width: 40%;
                         display: flex;
                         flex-direction: column;
-                        background-color: map-get($colors, realisations);
-                        border: 5px solid black;
+                        height: 120px;
+                        padding: 5px;
+                        display: flex;
+                        background-color: #e1b582;
                         overflow-y: scroll;
                         overflow-x: hidden;
                         scrollbar-color: black map-get($colors, realisations);
-                        padding: $padding;
+                        z-index: 1;
+                        font-size: 1.1em;
+                        box-shadow: inset 3px 3px 3px black, inset -3px -3px 5px black;
+                        border: solid 5px map-get($colors, realisations);
+                        border-left: none;
+                        border-top: none;
 
-                        p {
-                            font-size: 1.1em;
+                        @media screen and (min-width: map-get($breakpoints, desktop)) {
+                            height: 200px;
+                            width: calc(100% - 30px);
+                            box-shadow: inset 3px 3px 3px black, inset -23px -3px 5px black;
+                            border: solid 10px map-get($colors, realisations);
                         }
                     }
 
-                }
-            }
+                    &__tech {
+                        background-color: #e1b582;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        // justify-content: center;
+                        // width: calc(100% - 20px);
+                        // padding: 10px;
+                        box-shadow: 0px 1px 7px black inset;
+                        border-radius: 0px 0px 15px 15px;
 
-            .acces {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 150px;
-                height: 150px;
+                        h3 {
+                            margin-top: 0;
+                            display: flex;
+                            justify-content: center;
+                            background-color: map-get($colors, realisations);
+                            border-radius: 0 0 15px 15px;
+                            padding: 4px;
+
+                            @media screen and (min-width: map-get($breakpoints, desktop)) {
+                                box-shadow: 0px 1px 7px black;
+                            }
+                        }
+
+                        &__competences {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-around;
+                            padding: 5px;
+                            padding-top: 0;
+
+                            @media screen and (min-width: map-get($breakpoints, desktop)) {}
+
+                            img {
+                                height: 100px;
+                            }
+
+                        }
+                    }
+                }
             }
         }
     }
-
 }

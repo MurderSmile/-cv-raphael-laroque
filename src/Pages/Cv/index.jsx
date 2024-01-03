@@ -1,4 +1,3 @@
-import Video from "../../Assets/Videos/orange.mp4";
 import Presentation from "./CvSections/Presentaion";
 import Profil from "./CvSections/Profil";
 import Experiences from "./CvSections/Experiences";
@@ -20,7 +19,6 @@ function Cv() {
 
     return (
         <main id="Cv">
-            <video id="videoFont" src={Video} autoPlay loop muted></video>
             <Presentation />
             <Profil />
             <Experiences />

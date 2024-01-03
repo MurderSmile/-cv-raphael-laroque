@@ -29,7 +29,13 @@ function Project() {
 
                         <div className="Apercu__details__tech">
 
-                            {project.images}
+                            <h3>Compétence(s) apprise(s):</h3>
+
+                            <div className="Apercu__details__tech__competences">
+                                {project.images.map((image, i) => (
+                                    <img src={image} alt={image} key={i} />
+                                ))}
+                            </div>
 
                         </div>
 
@@ -37,9 +43,9 @@ function Project() {
 
                 </div>
 
-                <div className="acces">
-                    <Link to={project.github}><button className="btnRealisation">GitHub</button></Link>
-                </div>
+                {/* <div className="acces"> */}
+                <Link to={project.github}><button className="btnRealisation gitHub">GitHub</button></Link>
+                {/* </div> */}
 
             </div>
 
