@@ -3,7 +3,7 @@
     border-radius: 1em;
     padding: 0.3em;
     margin: 0.3em;
-    box-shadow: 0.3em 0.3em $color inset, 0.3em 0.3em black;
+    box-shadow: 5px 5px $color inset, 5px 5px 0px black;
     margin: 7px;
 
     &::before {
@@ -47,10 +47,10 @@
         display: flex;
         height: 60px;
 
-        @media screen and (max-width: map-get($breakpoints, mobile)) {
-            box-shadow: 0px 0px 0px black;
-            transition: box-shadow 350ms 150ms;
-        }
+        // @media screen and (max-width: map-get($breakpoints, mobile)) {
+        //     box-shadow: 0px 0px 0px black;
+        //     transition: box-shadow 350ms 150ms;
+        // }
 
         &__title {
             display: flex;
@@ -65,12 +65,12 @@
                 font-size: 20px;
                 width: 30px;
                 height: 30px;
-                border-radius: 1em;
+                border-radius: 25px;
                 border: 5px solid $color;
             }
 
             h3 {
-                margin-left: 10px;
+                padding-left: 10px;
             }
         }
 

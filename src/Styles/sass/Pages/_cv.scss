@@ -26,36 +26,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        // padding: 50px;
         max-width: calc(100% - 100px);
         margin-bottom: 10px;
 
         @media screen and (min-width: map-get($breakpoints, desktop)) {
             grid-column: 1 / 4;
             grid-row: 1 / 2;
+            width: 90%;
+            border-radius: 10px;
 
-            background-color: rgba(149, 0, 168, 0.5);
-            box-shadow: -5px -5px 5px rgba(149, 0, 168, 0.6);
-            border-radius: 30% 70% 47% 53% / 59% 26% 74% 41%;
-            width: 70%;
-        }
-
-        &::before {
-            position: absolute;
-            content: "";
-            border-radius: 1em;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            z-index: -1;
-
-
-            @media screen and (min-width: map-get($breakpoints, desktop)) {
-                background-color: rgba(223, 205, 42, 0.7);
-                box-shadow: 5px 5px 5px rgba(223, 205, 42, 0.8);
-                border-radius: 84% 16% 70% 30% / 45% 67% 33% 55%;
-            }
         }
 
         &__profil {
@@ -63,8 +42,10 @@
             flex-direction: column;
             align-items: center;
             margin: 40px 0px 40px 0px;
+            max-width: 330px;
 
             @media screen and (min-width: map-get($breakpoints, desktop)) {
+                max-width: 1000px;
                 height: 350px;
                 flex-direction: row-reverse;
             }
@@ -84,16 +65,39 @@
             }
 
             &__description {
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 list-style-type: none;
                 justify-self: flex-start;
-                background-color: rgba(225, 181, 130, 0.7);
+                background-color: rgba(227, 232, 235, 0.8);
                 border: 3px solid rgba(227, 232, 235, 0.9);
                 border-radius: 0px 0px 25px 25px;
                 width: calc(100% - 9px);
                 padding: 2px;
+
+                &::before {
+                    background-image: url("../../Assets/Images/presentation.jpg");
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    box-shadow: 5px 5px 5px inset;
+                    background-size: cover;
+                    position: absolute;
+                    content: "";
+                    border-radius: 10px;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    z-index: -1;
+                    border-radius: 0px 0px 25px 25px;
+
+                    @media screen and (min-width: map-get($breakpoints, desktop)) {
+                        border-radius: 25px 0px 0px 25px;
+
+                    }
+                }
 
                 @media screen and (max-width: map-get($breakpoints, mobile)) {
                     border-top: none;
@@ -122,19 +126,23 @@
                         border-radius: 25px;
                         justify-content: center;
                         align-items: center;
-                        margin-right: $margin;
+                        // margin-right: 0;
                     }
 
-
-                    strong {
-                        font-weight: normal;
+                    span {
+                        // background-color: black;
+                        // color: white;
+                        font-weight: bold;
+                        // padding: 5px;
+                        // border-radius: 25px;
+                        // margin-left: 0;
+                        color: black;
                     }
 
                     a {
                         display: flex;
                         align-items: center;
                         text-decoration: none;
-                        color: black;
                     }
                 }
             }
@@ -252,8 +260,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-
 
         .Descriptif {
             display: flex;

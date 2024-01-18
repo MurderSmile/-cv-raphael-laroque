@@ -43,9 +43,7 @@ function Project() {
 
                 </div>
 
-                {/* <div className="acces"> */}
                 <Link to={project.github}><button className="btnRealisation gitHub">GitHub</button></Link>
-                {/* </div> */}
 
             </div>
 

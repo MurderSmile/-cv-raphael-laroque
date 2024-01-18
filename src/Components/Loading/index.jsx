@@ -4,7 +4,7 @@ function loading() {
     return (
 
         <div id="loading">
-            <i class="fas fa-spinner"></i>
+            <i className="fas fa-spinner"></i>
         </div>
     )
 }

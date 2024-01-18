@@ -5,8 +5,9 @@ footer {
     background-color: #595959;
     height: 100px;
     bottom: 0;
-    margin: 4px;
-    border-radius: 5px;
+    margin-top: 30px;
+    border-radius: 25px 25px 0 0;
+    box-shadow: 2px -2px 5px black;
 
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         grid-column: 1 / 4;
