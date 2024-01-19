@@ -1,3 +1,5 @@
+// loading
+
 @keyframes loading_stop {
     0% {
         transform: scale(1);
@@ -8,17 +10,22 @@
     }
 }
 
-@keyframes loading_icon_stop {
+
+@keyframes rotateY_logo {
     0% {
-        color: #9500a8;
-        transform: rotate(0deg);
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
     }
 
     100% {
-        color: #e1b582;
-        transform: rotate(360deg);
+        transform: rotateY(360deg);
     }
 }
+
+// button
 
 @keyframes trans-button {
     from {
@@ -39,6 +46,8 @@
         opacity: 1;
     }
 }
+
+// progress-bar
 
 @keyframes change-width-fifty {
     from {

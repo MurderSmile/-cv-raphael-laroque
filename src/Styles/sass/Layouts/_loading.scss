@@ -1,60 +1,45 @@
-// #loading {
-//     display: flex;
-//     position: fixed;
-//     align-items: center;
-//     justify-content: center;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     z-index: 2;
-//     animation: loading_color 2000ms infinite ease-in-out, loading_stop 200ms 1800ms forwards;
-
-//     .logo {
-//         position: relative;
-//         height: 270px;
-//         width: 270px;
-//         transform-style: preserve-3d;
-//         animation: rotate_logo 2000ms infinite ease-in-out;
-
-//         &__face {
-//             position: absolute;
-//             backface-visibility: hidden;
-//             animation: border_logo_face 2000ms infinite ease-in-out;
-//             border-radius: 100%;
-//             overflow: hidden;
-//             height: 100%;
-//             width: 100%;
-
-//             &__back {
-//                 transform: rotateY(180deg);
-//             }
-
-//             img {
-//                 height: 100%;
-//                 width: 100%;
-//                 object-fit: cover;
-//             }
-//         }
-//     }
-
-// }
-
 #loading {
     display: flex;
     position: fixed;
     align-items: center;
     justify-content: center;
+    background-color: #595959;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    font-size: 200px;
     z-index: 2;
-    background-color: #595959;
-    animation: loading_stop 200ms 1800ms forwards;
+    animation: loading_stop 50ms 1950ms forwards;
 
-    i {
-        animation: loading_icon_stop 1000ms infinite;
+    .logo {
+        position: relative;
+        height: 270px;
+        width: 270px;
+        transform-style: preserve-3d;
+        animation: rotateY_logo 2000ms infinite ease-in-out;
+
+        &__face {
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 100%;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            background-color: #e1b582;
+
+            &__front {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &__back {
+                background-color: aqua;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: rotateY(180deg);
+            }
+        }
     }
 }

@@ -14,12 +14,13 @@ export const projects = [
         images: importAll(require.context('../../Assets/Images/Ohmyfood', false, /\.(png|jpe?g|svg)$/)),
         video: VOhmyfood,
         icon: <i className="fas fa-utensils"></i>,
-        description: <div className="Apercu__details__description">
-            <p>
-                Le client est une startup sur le marché de la restauration du nom de Ohmyfood.<br />
-                La commande est une maquette intéractive mobile-first, composé d'un index listant les restaurants participants, et de 4 pages restaurant/menu.
-            </p>
-        </div>,
+        description:
+            <div className="Apercu__details__description">
+                <p>
+                    Le client est une startup sur le marché de la restauration du nom de Ohmyfood.<br />
+                    La commande est une maquette intéractive mobile-first, composé d'un index listant les restaurants participants, et de 4 pages restaurant/menu.
+                </p>
+            </div>,
         github: 'https://github.com/MurderSmile/OC_Ohmyfood.git',
     },
 

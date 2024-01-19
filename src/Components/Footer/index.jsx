@@ -16,7 +16,7 @@ function Footer() {
                 <i className="fab fa-linkedin"></i>
             </Link>
 
-            <Link to="https://www.linkedin.com/in/raphael-laroque/?originalSubdomain=fr" aria-label="Visiter l'espace linkedin">
+            <Link to="https://github.com/MurderSmile" aria-label="Voir le profil GitHub">
                 <i className="fab fa-github"></i>
             </Link>
 
