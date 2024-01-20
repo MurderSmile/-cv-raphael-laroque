@@ -47,11 +47,6 @@
         display: flex;
         height: 60px;
 
-        // @media screen and (max-width: map-get($breakpoints, mobile)) {
-        //     box-shadow: 0px 0px 0px black;
-        //     transition: box-shadow 350ms 150ms;
-        // }
-
         &__title {
             display: flex;
             align-items: center;
