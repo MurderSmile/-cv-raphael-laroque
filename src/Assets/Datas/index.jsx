@@ -95,8 +95,8 @@ export const projects = [
                 </p>
                 <ul>
                     <li>L'objectif est de créer le Frontend et le backend du site.</li>
-                    <li>Le Frontend sera éditer en one-page avec le framework Js React.</li>
-                    <li>Le Backend sera éditer en Javascript et communiquera avec un serveur MongoDB.</li>
+                    <li>Le Frontend sera édité en one-page avec le framework Js React.</li>
+                    <li>Le Backend sera édité en Javascript et communiquera avec un serveur MongoDB.</li>
                     <li>Le site sera composé d'un rendu pour la partie connexion/inscription, d'une page "Accueil" pour afficher, modifier, liker et supprimer un post.</li>
                     <li>Un compte Administrateur aura la possibilité de modifier et de supprimer tout les posts.</li>
                 </ul>
