@@ -11,6 +11,7 @@ function loading() {
 
                 <div className="logo__face logo__face__back">
                     <i class="fas fa-smile-wink"></i>
+
                 </div>
 
             </div>
