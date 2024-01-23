@@ -15,8 +15,8 @@ footer {
     }
 
     i {
-        color: rgb(74, 240, 157);
+        color: map-get($colors, abstracts);
         font-size: 50px;
-        text-shadow: -2px -2px #9500a8, 2px 2px #e1b582;
+        text-shadow: -2px -2px darken(map-get($colors, abstracts), 50%), 2px 2px darken(map-get($colors, abstracts), 30%);
     }
 }
