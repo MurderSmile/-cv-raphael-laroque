@@ -3,8 +3,9 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: #595959;
-    color: rgb(74, 240, 157);
-    text-shadow: -2px -2px #9500a8, 2px 2px #e1b582;
+    color: map-get($colors, abstracts);
+    // text-shadow: -2px -2px #9500a8, 2px 2px #e1b582;
+    text-shadow: -2px -2px darken(map-get($colors, abstracts), 50%), 2px 2px darken(map-get($colors, abstracts), 30%);
     height: auto;
     top: 0;
     text-align: center;

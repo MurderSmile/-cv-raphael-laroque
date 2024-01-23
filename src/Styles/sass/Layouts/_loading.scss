@@ -24,21 +24,29 @@
             border-radius: 100%;
             overflow: hidden;
             height: 100%;
-            width: 100%;
-            background-color: #e1b582;
+            width: calc(100% - 20px);
+            background-color: map-get($colors, abstracts);
+            border: 10px solid black;
 
             &__front {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
             }
 
             &__back {
-                background-color: rgb(74, 240, 157);
+                background-color: #e1b582;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 transform: rotateY(180deg);
+
+            }
+
+            i,
+            p {
+                font-size: 230px;
             }
         }
     }
