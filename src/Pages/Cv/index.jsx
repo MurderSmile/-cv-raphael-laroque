@@ -3,7 +3,7 @@ import Profil from "./CvSections/Profil";
 import Experiences from "./CvSections/Experiences";
 import Formations from "./CvSections/Formations";
 import Competences from "./CvSections/Competences";
-import SoftSkills from "./CvSections/Softskills";
+import Softskills from "./CvSections/Softskills";
 import Interets from "./CvSections/Interets";
 import Realisations from "./CvSections/Realisations";
 import Project from "./CvSections/Project";
@@ -22,7 +22,7 @@ function Cv() {
       <Experiences />
       <Formations />
       <Competences />
-      <SoftSkills />
+      <Softskills />
       <Interets />
       <Realisations />
       {project && project != null ? <Project /> : null}
