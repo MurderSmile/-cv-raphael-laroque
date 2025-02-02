@@ -1,4 +1,4 @@
-import Presentation from "./Cvsections/Presentaion/index.jsx";
+import Presentation from "./Cvsections/Presentation/index.jsx";
 import Profil from "./Cvsections/Profil/index.jsx";
 import Experiences from "./Cvsections/Experiences/index.jsx";
 import Formations from "./Cvsections/Formations/index.jsx";
