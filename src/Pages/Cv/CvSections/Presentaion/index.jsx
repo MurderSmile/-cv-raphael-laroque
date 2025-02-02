@@ -3,106 +3,103 @@ import Cv from "../../../../Assets/Images/CV_Laroque_Raphaël.pdf";
 
 import { Link } from "react-router-dom";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 function Age() {
-    const [age, setAge] = useState(null);
+  const [age, setAge] = useState(null);
 
-    useEffect(() => {
-        // Date de naissance (25/10/1995)
-        const birthDate = new Date('1995-10-25');
+  useEffect(() => {
+    // Date de naissance (25/10/1995)
+    const birthDate = new Date("1995-10-25");
 
-        // Date actuelle
-        const currentDate = new Date();
+    // Date actuelle
+    const currentDate = new Date();
 
-        // Calcul de l'âge en soustrayant l'année de naissance de l'année actuelle
-        const ageInYears = currentDate.getFullYear() - birthDate.getFullYear();
+    // Calcul de l'âge en soustrayant l'année de naissance de l'année actuelle
+    const ageInYears = currentDate.getFullYear() - birthDate.getFullYear();
 
-        // Vérification si l'anniversaire est déjà passé cette année
-        if (
-            currentDate.getMonth() < birthDate.getMonth() ||
-            (currentDate.getMonth() === birthDate.getMonth() &&
-                currentDate.getDate() < birthDate.getDate())
-        ) {
-            setAge(ageInYears - 1); // Réduire l'âge de 1 si l'anniversaire n'a pas encore eu lieu cette année
-        } else {
-            setAge(ageInYears);
-        }
-    }, []);
+    // Vérification si l'anniversaire est déjà passé cette année
+    if (
+      currentDate.getMonth() < birthDate.getMonth() ||
+      (currentDate.getMonth() === birthDate.getMonth() &&
+        currentDate.getDate() < birthDate.getDate())
+    ) {
+      setAge(ageInYears - 1); // Réduire l'âge de 1 si l'anniversaire n'a pas encore eu lieu cette année
+    } else {
+      setAge(ageInYears);
+    }
+  }, []);
 
-    return age
+  return age;
 }
-
-
 
 function Presentation() {
+  return (
+    <section id="Presentation">
+      <div id="Presentation__profil">
+        <img src={PhotoProfil} alt="Profil" />
 
-    return (
-        <section id="Presentation">
+        <ul id="Presentation__profil__description">
+          <li>
+            <i className="fas fa-user"></i>
+            <span>Français</span>
+          </li>
 
-            <div id="Presentation__profil">
+          <li>
+            <i className="fas fa-calendar-alt"></i>
+            <span>{Age()} ans</span>
+          </li>
 
-                <img src={PhotoProfil} alt="Profil" />
+          <li>
+            <i className="fas fa-home"></i>
+            <span>
+              <strong>Bordeaux</strong>, <strong>France</strong>
+            </span>
+          </li>
 
-                <ul id="Presentation__profil__description">
+          <li>
+            <i className="fas fa-car-side"></i>
+            <span>Permis B</span>
+          </li>
 
-                    <li>
-                        <i className="fas fa-user"></i>
-                        <span>Français</span>
-                    </li>
+          <li>
+            <Link to="tel:+33628515565">
+              <i className="fas fa-phone-square-alt"></i>
+              <span>06 28 51 55 65</span>
+            </Link>
+          </li>
 
-                    <li>
-                        <i className="fas fa-calendar-alt"></i>
-                        <span>{Age()} ans</span>
+          <li>
+            <Link to="mailto:raphael.laroque@yahoo.fr">
+              <i className="fas fa-envelope"></i>
+              <span>
+                <strong>raphael</strong>.<strong>laroque</strong>@yahoo.fr
+              </span>
+            </Link>
+          </li>
 
-                    </li>
+          <li>
+            <Link to="https://www.linkedin.com/in/raphael-laroque/?originalSubdomain=fr">
+              <i className="fab fa-linkedin"></i>
+              <span>
+                www.linkedin.com/in/<strong>raphael</strong>-
+                <strong>laroque</strong>
+              </span>
+            </Link>
+          </li>
+        </ul>
+      </div>
 
-                    <li>
-                        <i className="fas fa-home"></i>
-                        <span><strong>Bordeaux</strong>, <strong>France</strong></span>
-                    </li>
-
-                    <li>
-                        <i className="fas fa-car-side"></i>
-                        <span>Permis B</span>
-                    </li>
-
-                    <li>
-                        <Link to="tel:+33628515565">
-                            <i className="fas fa-phone-square-alt"></i>
-                            <span>06 28 51 55 65</span>
-                        </Link>
-                    </li>
-
-                    <li>
-                        <Link to="mailto:raphael.laroque@yahoo.fr">
-                            <i className="fas fa-envelope"></i>
-                            <span><strong>raphael</strong>.<strong>laroque</strong>@yahoo.fr</span>
-                        </Link>
-                    </li>
-
-                    <li>
-                        <Link to="https://www.linkedin.com/in/raphael-laroque/?originalSubdomain=fr">
-                            <i className="fab fa-linkedin"></i>
-                            <span>www.linkedin.com/in/<strong>raphael</strong>-<strong>laroque</strong></span>
-                        </Link>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <div className="btnCv">
-                <a href={Cv} aria-label="Télécharger la Version PDF">
-                    <button>
-                        <i className="fas fa-file-download"></i>
-                        Télécharger la Version PDF
-                    </button>
-                </a>
-            </div>
-
-        </section>
-    )
+      <div className="btnCv">
+        <a href={Cv} aria-label="Télécharger la Version PDF">
+          <button>
+            <i className="fas fa-file-download"></i>
+            Télécharger la Version PDF
+          </button>
+        </a>
+      </div>
+    </section>
+  );
 }
 
-export default Presentation
+export default Presentation;
